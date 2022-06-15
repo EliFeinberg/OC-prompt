@@ -1,0 +1,8 @@
+{
+    "Commands" : {
+        "ls" : "list directory",
+        "cd" : "Change directory",
+        "cp" : "Copy"
+    }
+
+}
