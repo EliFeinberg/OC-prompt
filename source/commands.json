@@ -1,8 +1,18 @@
 {
     "Commands" : {
-        "ls" : "list directory",
-        "cd" : "Change directory",
-        "cp" : "Copy"
+        "ls" : {
+            "Text" : "ls",
+            "Description" : "List directory"
+        },
+        "login" : {
+            "Text" : "login",
+            "Description" : "Log in to a server"
+        },
+        "new-project" {
+            "Text" : "",
+            "Description" : ""
+        }
     }
+
 
 }

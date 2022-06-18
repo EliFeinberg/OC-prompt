@@ -1,0 +1,200 @@
+{ 
+    "Commands": 
+    {"login":
+        { "Text": "login", "Description": "Log in to a server" },
+    "new-project":
+        { "Text": "new-project",
+        "Description": "Request a new project" },
+    "new-app":
+        { "Text": "new-app",
+        "Description": "Create a new application" },
+    "status":
+        { "Text": "status",
+        "Description": "Show an overview of the current project" },
+    "project":
+        { "Text": "project",
+        "Description": "Switch to another project" },
+    "projects":
+        { "Text": "projects",
+        "Description": "Display existing projects" },
+    "explain":
+        { "Text": "explain",
+        "Description": "Documentation of resources" },
+    "rollout":
+        { "Text": "rollout",
+        "Description":
+        "Manage a Kubernetes deployment or OpenShift deployment config" },
+    "rollback":
+        { "Text": "rollback",
+        "Description":
+        "Revert part of an application back to a previous deployment" },
+    "new-build":
+        { "Text": "new-build",
+        "Description": "Create a new build configuration" },
+    "start-build":
+        { "Text": "start-build",
+        "Description": "Start a new build" },
+    "cancel-build":
+        { "Text": "cancel-build",
+        "Description": "Cancel running, pending, or new builds" },
+    "import-image":
+        { "Text": "import-image",
+        "Description": "Import images from a container image registry" },
+    "tag":
+        { "Text": "tag",
+        "Description": "Tag existing images into image streams" },
+    "create":
+        { "Text": "create",
+        "Description": "Create a resource from a file or from stdin" },
+    "apply":
+        { "Text": "apply",
+        "Description": "Apply a configuration to a resource by filename or stdin" },
+    "get":
+        { "Text": "get",
+        "Description": "Display one or many resources" },
+    "describe":
+        { "Text": "describe",
+        "Description": "Show details of a specific resource or group of resources" },
+    "edit":
+        { "Text": "edit",
+        "Description": "Edit a resource on the server" },
+    "set":
+        { "Text": "set",
+        "Description": "Commands that help set specific features on objects" },
+    "label":
+        { "Text": "label",
+        "Description": "Update the labels on a resource" },
+    "annotate":
+        { "Text": "annotate",
+        "Description": "Update the annotations on a resource" },
+    "expose":
+        { "Text": "expose",
+        "Description": "Expose a replicated application as a service or route" },
+    "delete":
+        { "Text": "delete",
+        "Description":
+        "Delete resources by filenames, stdin, resources and names, or by resources and label selector" },
+    "scale":
+        { "Text": "scale",
+        "Description":
+        "Set a new size for a Deployment, ReplicaSet or Replication Controller" },
+    "autoscale":
+        { "Text": "autoscale",
+        "Description":
+        "Autoscale a deployment config, deployment, replica set, stateful set, or replication controller" },
+    "secrets":
+        { "Text": "secrets", "Description": "Manage secrets" },
+    "serviceaccounts":
+        { "Text": "serviceaccounts",
+        "Description": " Manage service accounts in your project" },
+    "logs":
+        { "Text": "logs",
+        "Description": "Print the logs for a container in a pod" },
+    "rsh":
+        { "Text": "rsh",
+        "Description": "Start a shell session in a container" },
+    "rsync":
+        { "Text": "rsync",
+        "Description": "Copy files between a local file system and a pod" },
+    "port-forward":
+        { "Text": "port-forward",
+        "Description": "Forward one or more local ports to a pod" },
+    "debug":
+        { "Text": "debug",
+        "Description": "Launch a new instance of a pod for debugging" },
+    "exec":
+        { "Text": "exec",
+        "Description": "Execute a command in a container" },
+    "proxy":
+        { "Text": "proxy",
+        "Description": "Run a proxy to the Kubernetes API server" },
+    "attach":
+        { "Text": "attach",
+        "Description": "Attach to a running container" },
+    "run":
+        { "Text": "run",
+        "Description": "Run a particular image on the cluster" },
+    "cp":
+        { "Text": "cp",
+        "Description": "Copy files and directories to and from containers" },
+    "wait":
+        { "Text": "wait",
+        "Description":
+        "Experimental Wait for a specific condition on one or many resources" },
+    "adm":
+        { "Text": "adm",
+        "Description": "Tools for managing a cluster" },
+    "replace":
+        { "Text": "replace",
+        "Description": "Replace a resource by filename or stdin" },
+    "patch":
+        { "Text": "patch",
+        "Description": "Update field(s) of a resource" },
+    "process":
+        { "Text": "process",
+        "Description": "Process a template into list of resources" },
+    "extract":
+        { "Text": "extract",
+        "Description": "Extract secrets or config maps to disk" },
+    "observe":
+        { "Text": "observe",
+        "Description":
+        "Observe changes to resources and react to them (experimental)" },
+    "policy":
+        { "Text": "policy",
+        "Description": "Manage authorization policy" },
+    "auth":
+        { "Text": "auth",
+        "Description": "Inspect authorization" },
+    "image":
+        { "Text": "image",
+        "Description": "Useful commands for managing images" },
+    "registry":
+        { "Text": "registry",
+        "Description": "Commands for working with the registry" },
+    "idle":
+        { "Text": "idle",
+        "Description": "Idle scalable resources" },
+    "api-versions":
+        { "Text": "api-versions",
+        "Description":
+        "Print the supported API versions on the server, in the form of group/version" },
+    "api-resources":
+        { "Text": "api-resources",
+        "Description": "Print the supported API resources on the server" },
+    "cluster-info":
+        { "Text": "cluster-info",
+        "Description": "Display cluster info" },
+    "diff":
+        { "Text": "diff",
+        "Description": "Diff live version against would-be applied version" },
+    "kustomize":
+        { "Text": "kustomize",
+        "Description": "Build a kustomization target from a directory or URL" },
+    "logout":
+        { "Text": "logout",
+        "Description": "End the current server session" },
+    "config":
+        { "Text": "config",
+        "Description": "Modify kubeconfig files" },
+    "whoami":
+        { "Text": "whoami",
+        "Description": "Return information about the current session" },
+    "completion":
+        { "Text": "completion",
+        "Description":
+        "Output shell completion code for the specified shell (bash or zsh)" },
+    "ex":
+        { "Text": "ex",
+        "Description": "Experimental commands under active development" },
+    "help":
+        { "Text": "help",
+        "Description": "Help about any command" },
+    "plugin":
+        { "Text": "plugin",
+        "Description": "Provides utilities for interacting with plugins" },
+    "version":
+        { "Text": "version",
+        "Description": "Print the client and server version information" } 
+    }
+}
