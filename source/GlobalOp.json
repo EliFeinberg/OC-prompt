@@ -64,6 +64,9 @@
     "--namespace=''":
         { "Text": "--namespace=''",
         "Description": " If present, the namespace scope for this CLI request" },
+    "-n":
+        { "Text": "-n",
+        "Description": " If present, the namespace scope for this CLI request" },
     "--one-output=false":
         { "Text": "--one-output=false",
         "Description": " If true, only write logs to their native severity level (vs also writing to each lower severity level)" },
@@ -72,6 +75,9 @@
         "Description": " The length of time to wait before giving up on a single server request. Non-zero values should contain a corresponding time unit (e.g. 1s, 2m, 3h). A value of zero means don\"t timeout requests." },
     "--server=''":
         { "Text": "--server=''",
+        "Description": " The address and port of the Kubernetes API server" },
+    "-s":
+        { "Text": "-s",
         "Description": " The address and port of the Kubernetes API server" },
     "--skip-headers=false":
         { "Text": "--skip-headers=false",
@@ -93,6 +99,9 @@
         "Description": " The name of the kubeconfig user to use" },
     "--v=0":
         { "Text": "--v=0",
+        "Description": " number for the log level verbosity" },
+    "-v":
+        { "Text": "-v",
         "Description": " number for the log level verbosity" },
     "--vmodule=":
         { "Text": "--vmodule=",
