@@ -1,0 +1,103 @@
+{ 
+    "--add-dir-header=false":
+        { "Text": "--add-dir-header=false",
+        "Description": " If true, adds the file directory to the header of the log messages" },
+    "--alsologtostderr=false":
+        { "Text": "--alsologtostderr=false",
+        "Description": " log to standard error as well as files" },
+    "--as=''":
+        { "Text": "--as=''",
+        "Description": " Username to impersonate for the operation. User could be a regular user or a service account in a namespace." },
+    "--as-group=[]":
+        { "Text": "--as-group=[]",
+        "Description": " Group to impersonate for the operation, this flag can be repeated to specify multiple groups." },
+    "--as-uid=''":
+        { "Text": "--as-uid=''",
+        "Description": " UID to impersonate for the operation." },
+    "--cache-dir='/Users/elifeinberg/.kube/cache'":
+        { "Text": "--cache-dir='/Users/elifeinberg/.kube/cache'",
+        "Description": " Default cache directory" },
+    "--certificate-authority=''":
+        { "Text": "--certificate-authority=''",
+        "Description": " Path to a cert file for the certificate authority" },
+    "--client-certificate=''":
+        { "Text": "--client-certificate=''",
+        "Description": " Path to a client certificate file for TLS" },
+    "--client-key=''":
+        { "Text": "--client-key=''",
+        "Description": " Path to a client key file for TLS" },
+    "--cluster=''":
+        { "Text": "--cluster=''",
+        "Description": " The name of the kubeconfig cluster to use" },
+    "--context=''":
+        { "Text": "--context=''",
+        "Description": " The name of the kubeconfig context to use" },
+    "--insecure-skip-tls-verify=false":
+        { "Text": "--insecure-skip-tls-verify=false",
+        "Description": " If true, the server\"s certificate will not be checked for validity. This will make your HTTPS connections insecure" },
+    "--kubeconfig=''":
+        { "Text": "--kubeconfig=''",
+        "Description": " Path to the kubeconfig file to use for CLI requests." },
+    "--log-backtrace-at=:0":
+        { "Text": "--log-backtrace-at=:0", "Description": "when logging hits line file:N, emit a stack trace" },
+    "--log-dir=''":
+        { "Text": "--log-dir=''",
+        "Description": " If non-empty, write log files in this directory" },
+    "--log-file=''":
+        { "Text": "--log-file=''",
+        "Description": " If non-empty, use this log file" },
+    "--log-file-max-size=1800":
+        { "Text": "--log-file-max-size=1800",
+        "Description": " Defines the maximum size a log file can grow to. Unit is megabytes. If the value is 0, the maximum file size is unlimited." },
+    "--log-flush-frequency=5s":
+        { "Text": "--log-flush-frequency=5s",
+        "Description": " Maximum number of seconds between log flushes" },
+    "--loglevel=0":
+        { "Text": "--loglevel=0",
+        "Description": " Set the level of log output (0-10)" },
+    "--logtostderr=true":
+        { "Text": "--logtostderr=true",
+        "Description": " log to standard error instead of files" },
+    "--match-server-version=false":
+        { "Text": "--match-server-version=false",
+        "Description": " Require server version to match client version " },
+    "--namespace=''":
+        { "Text": "--namespace=''",
+        "Description": " If present, the namespace scope for this CLI request" },
+    "--one-output=false":
+        { "Text": "--one-output=false",
+        "Description": " If true, only write logs to their native severity level (vs also writing to each lower severity level)" },
+    "--request-timeout='0'":
+        { "Text": "--request-timeout='0'",
+        "Description": " The length of time to wait before giving up on a single server request. Non-zero values should contain a corresponding time unit (e.g. 1s, 2m, 3h). A value of zero means don\"t timeout requests." },
+    "--server=''":
+        { "Text": "--server=''",
+        "Description": " The address and port of the Kubernetes API server" },
+    "--skip-headers=false":
+        { "Text": "--skip-headers=false",
+        "Description": " If true, avoid header prefixes in the log messages" },
+    "--skip-log-headers=false":
+        { "Text": "--skip-log-headers=false",
+        "Description": " If true, avoid headers when opening log files" },
+    "--stderrthreshold=2":
+        { "Text": "--stderrthreshold=2",
+        "Description": " logs at or above this threshold go to stderr" },
+    "--tls-server-name=''":
+        { "Text": "--tls-server-name=''",
+        "Description": " Server name to use for server certificate validation. If it is not provided, the hostname used to contact the server is used." },
+    "--token=''":
+        { "Text": "--token=''",
+        "Description": " Bearer token for authentication to the API server" },
+    "--user=''":
+        { "Text": "--user=''",
+        "Description": " The name of the kubeconfig user to use" },
+    "--v=0":
+        { "Text": "--v=0",
+        "Description": " number for the log level verbosity" },
+    "--vmodule=":
+        { "Text": "--vmodule=",
+        "Description": " comma-separated list of pattern=N settings for file-filtered logging" },
+    "--warnings-as-errors=false":
+        { "Text": "--warnings-as-errors=false",
+        "Description": " Treat warnings received from the server as errors and exit with a non-zero exit code" } 
+}
