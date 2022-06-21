@@ -1,0 +1,18 @@
+Manage authorization policy
+
+Usage:
+  oc policy [flags]
+
+Available Commands:
+  add-role-to-group      Add a role to groups for the project
+  add-role-to-user       Add a role to users or service accounts for the current project
+  remove-group           Remove group from the project
+  remove-role-from-group Remove a role from groups for the project
+  remove-role-from-user  Remove a role from users for the project
+  remove-user            Remove user from the project
+  scc-review             Check which service account can create a pod
+  scc-subject-review     Check whether a user or a service account can create a pod
+  who-can                List who can perform the specified action on a resource
+
+Use "oc <command> --help" for more information about a given command.
+Use "oc options" for a list of global command-line options (applies to all commands).

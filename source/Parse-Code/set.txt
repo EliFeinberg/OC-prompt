@@ -1,0 +1,34 @@
+Configure application resources
+
+ These commands help you make changes to existing application resources.
+
+Usage:
+  oc set COMMAND [flags]
+
+Manage workloads:
+  deployment-hook Update a deployment hook on a deployment config
+  env             Update environment variables on a pod template
+  image           Update the image of a pod template
+  probe           Update a probe on a pod template
+  resources       Update resource requests/limits on objects with pod templates
+  selector        Set the selector on a resource
+  serviceaccount  Update the service account of a resource
+  volumes         Update volumes on a pod template
+
+Manage secrets and config:
+  data            Update the data within a config map or secret
+  build-secret    Update a build secret on a build config
+
+Manage application flows:
+  build-hook      Update a build hook on a build config
+  image-lookup    Change how images are resolved when deploying applications
+  triggers        Update the triggers on one or more objects
+
+Manage load balancing:
+  route-backends  Update the backends for a route
+
+Manage authorization policy:
+  subject         Update the user, group, or service account in a role binding or cluster role binding
+
+Use "oc set <command> --help" for more information about a given command.
+Use "oc options" for a list of global command-line options (applies to all commands).

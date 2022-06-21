@@ -1,0 +1,45 @@
+Administrative Commands
+
+ Actions for administering an OpenShift cluster are exposed here.
+
+Usage:
+  oc adm [flags]
+
+Cluster Management:
+  upgrade                            Upgrade a cluster
+  top                                Show usage statistics of resources on the server
+  must-gather                        Launch a new instance of a pod for gathering debug information
+  inspect                            Collect debugging data for a given resource
+
+Node Management:
+  drain                              Drain node in preparation for maintenance
+  cordon                             Mark node as unschedulable
+  uncordon                           Mark node as schedulable
+  taint                              Update the taints on one or more nodes
+  node-logs                          Display and filter node logs
+
+Security and Policy:
+  new-project                        Create a new project
+  policy                             Manage cluster authorization and security policy
+  groups                             Manage groups
+  certificate                        Approve or reject certificate requests
+  pod-network                        Manage pod network
+
+Maintenance:
+  prune                              Remove older versions of resources from the server
+  migrate                            Migrate data in the cluster
+
+Configuration:
+  create-kubeconfig                  Create a basic .kubeconfig file from client certs
+  create-bootstrap-project-template  Create a bootstrap project template
+  create-login-template              Create a login template
+  create-provider-selection-template Create a provider selection template
+  create-error-template              Create an error page template
+
+Other Commands:
+  build-chain                        Output the inputs and dependencies of your builds
+  catalog                            Tools for managing the OpenShift OLM Catalogs
+  verify-image-signature             Verify the image identity contained in the image signature
+
+Use "oc adm <command> --help" for more information about a given command.
+Use "oc options" for a list of global command-line options (applies to all commands).

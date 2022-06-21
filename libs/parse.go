@@ -36,3 +36,38 @@ func ParseFiletoSuggest(path string) []prompt.Suggest {
 	}
 	return Commands
 }
+
+func WriteHelp(str string, cmd string) {
+
+	f, _ := os.Create("source/Parse-Code/" + cmd + ".txt")
+
+	defer f.Close()
+
+	n2, _ := f.WriteString(str)
+	fmt.Printf("wrote %d bytes\n", n2)
+}
+
+func ParseFileForCommandList(path string) []string {
+	// Opens Json file to be parsed
+	contents, err := os.Open(path)
+	if err != nil {
+		fmt.Println(err)
+	}
+	// Defer close so fd is closed at termination of function
+	defer contents.Close()
+
+	// Set of Commands returned
+	var Commands []string
+
+	// Format Json into Go accessible values then compile a list of
+	var result map[string]map[string]string
+	jsonval, err := ioutil.ReadAll(contents)
+	if err != nil {
+		fmt.Println(err)
+	}
+	json.Unmarshal(jsonval, &result)
+	for k, _ := range result {
+		Commands = append(Commands, k)
+	}
+	return Commands
+}

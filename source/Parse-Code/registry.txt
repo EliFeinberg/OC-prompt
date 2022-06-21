@@ -1,0 +1,13 @@
+Manage the integrated registry on OpenShift
+
+ These commands help you work with an integrated OpenShift registry.
+
+Usage:
+  oc registry COMMAND [flags]
+
+Advanced commands:
+  info        Print information about the integrated registry
+  login       Log in to the integrated registry
+
+Use "oc registry <command> --help" for more information about a given command.
+Use "oc options" for a list of global command-line options (applies to all commands).
