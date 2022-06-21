@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
+	"go-prompt/libs"
 
 	"github.com/c-bata/go-prompt"
 )
 
 func completer(d prompt.Document) []prompt.Suggest {
-	s := []prompt.Suggest{
-		{Text: "users", Description: "Store the username and age"},
-		{Text: "articles", Description: "Store the article text posted by user"},
-		{Text: "comments", Description: "Store the text commented to articles"},
-	}
+	text := d.GetWordBeforeCursor()
+	// fmt.Println(text)
+	s := libs.ParseFiletoSuggest("source/commands.json")
+
 	return prompt.FilterHasPrefix(s, d.GetWordBeforeCursor(), true)
 }
 func main() {
@@ -21,5 +21,6 @@ func main() {
 		completer,
 		prompt.OptionTitle("RHOCP CLI"),
 		prompt.OptionSelectedDescriptionTextColor(prompt.DarkGray), prompt.OptionPrefixBackgroundColor(prompt.DarkBlue))
+
 	fmt.Println("You selected: oc", t)
 }

@@ -1,6 +1,5 @@
 { 
-    "Commands": 
-    {"login":
+    "login":
         { "Text": "login", "Description": "Log in to a server" },
     "new-project":
         { "Text": "new-project",
@@ -196,5 +195,5 @@
     "version":
         { "Text": "version",
         "Description": "Print the client and server version information" } 
-    }
+    
 }
