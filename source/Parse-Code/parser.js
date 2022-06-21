@@ -5,7 +5,7 @@ const result = {};
 const keys = ["\"Text\"", "\"Description\""];
 
 // Read data
-const readStream = fs.createReadStream("commands.txt");
+const readStream = fs.createReadStream("GlobalOp.txt");
 
 // Parser
 const parser = csv.parse({ delimiter: ":" });
