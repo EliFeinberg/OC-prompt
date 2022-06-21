@@ -8,7 +8,7 @@ Usage:
   oc [flags]
 
 Basic Commands:
-  login           Log in to a server
+  login      :     Log in to a server
   new-project     Request a new project
   new-app         Create a new application
   status          Show an overview of the current project
