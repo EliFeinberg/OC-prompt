@@ -66,6 +66,7 @@ func main() {
 			ps = exec.Command("clear")
 		} else {
 			ps = exec.Command("oc", CMDargs...)
+			// fmt.Println(CMDargs)
 		}
 
 		res, err := ps.Output()
