@@ -13,7 +13,7 @@
   },
   "--no-headers=false": {
     "Text": "--no-headers=false",
-    "Description": " When using the default or custom-column output format, don\"t print headers (default print headers)."
+    "Description": " When using the default or custom-column output format, don't print headers (default print headers)."
   },
   "-o": {
     "Text": "-o",
@@ -25,7 +25,7 @@
   },
   "--sort-by=''": {
     "Text": "--sort-by=''",
-    "Description": " If non-empty, sort list of resources using specified field. The field can be either \"name\" or \"kind\"."
+    "Description": " If non-empty, sort list of resources using specified field. The field can be either 'name' or 'kind'."
   },
   "--verbs=[]": {
     "Text": "--verbs=[]",

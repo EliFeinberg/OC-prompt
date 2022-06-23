@@ -45,7 +45,7 @@
     },
     "--insecure-skip-tls-verify=false": {
         "Text": "--insecure-skip-tls-verify=false",
-        "Description": " If true, the server\"s certificate will not be checked for validity. This will make your HTTPS connections insecure"
+        "Description": " If true, the server's certificate will not be checked for validity. This will make your HTTPS connections insecure"
     },
     "--kubeconfig=''": {
         "Text": "--kubeconfig=''",
@@ -97,7 +97,7 @@
     },
     "--request-timeout='0'": {
         "Text": "--request-timeout='0'",
-        "Description": " The length of time to wait before giving up on a single server request. Non-zero values should contain a corresponding time unit (e.g. 1s, 2m, 3h). A value of zero means don\"t timeout requests."
+        "Description": " The length of time to wait before giving up on a single server request. Non-zero values should contain a corresponding time unit (e.g. 1s, 2m, 3h). A value of zero means don't timeout requests."
     },
     "--server=''": {
         "Text": "--server=''",

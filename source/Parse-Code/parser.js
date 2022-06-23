@@ -5,7 +5,7 @@ const result = {};
 const keys = ["\"Text\"", "\"Description\""];
 
 // Read data
-const readStream = fs.createReadStream("cancel-build.txt");
+const readStream = fs.createReadStream("proxy.txt");
 
 // Parser
 const parser = csv.parse({ delimiter: ":" });

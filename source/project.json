@@ -1,0 +1,10 @@
+{
+    "-q": {
+        "Text": "-q",
+        "Description": "If true, display only the project name"
+    },
+    "--short=false": {
+        "Text": "--short=false",
+        "Description": "If true, display only the project name"
+    }
+}

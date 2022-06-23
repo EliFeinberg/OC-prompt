@@ -1,0 +1,82 @@
+{
+    "--all-containers=false": {
+        "Text": "--all-containers=false",
+        "Description": "Get all containers\"logs in the pod(s)."
+    },
+    "-c": {
+        "Text": "-c",
+        "Description": "Print the logs of this container"
+    },
+    "--container=''": {
+        "Text": "--container=''",
+        "Description": "Print the logs of this container"
+    },
+    "-f": {
+        "Text": "-f",
+        "Description": "Specify if the logs should be streamed."
+    },
+    "--follow=false": {
+        "Text": "--follow=false",
+        "Description": "Specify if the logs should be streamed."
+    },
+    "--ignore-errors=false": {
+        "Text": "--ignore-errors=false",
+        "Description": "If watching / following pod logs, allow for any errors that occur to be non-fatal"
+    },
+    "--insecure-skip-tls-verify-backend=false": {
+        "Text": "--insecure-skip-tls-verify-backend=false",
+        "Description": "Skip verifying the identity of the kubelet that logs are requested from. In theory, an attacker could provide invalid log content back. You might want to use this if your kubelet serving certificates have expired."
+    },
+    "--limit-bytes=0": {
+        "Text": "--limit-bytes=0",
+        "Description": "Maximum bytes of logs to return. Defaults to no limit."
+    },
+    "--max-log-requests=5": {
+        "Text": "--max-log-requests=5",
+        "Description": "Specify maximum number of concurrent logs to follow when using by a selector. Defaults to 5."
+    },
+    "--pod-running-timeout=20s": {
+        "Text": "--pod-running-timeout=20s",
+        "Description": "The length of time (like 5s, 2m, or 3h, higher than zero) to wait until at least one pod is running"
+    },
+    "--prefix=false": {
+        "Text": "--prefix=false",
+        "Description": "Prefix each log line with the log source (pod name and container name)"
+    },
+    "-p": {
+        "Text": "-p",
+        "Description": "If true, print the logs for the previous instance of the container in a pod if it exists."
+    },
+    "--previous=false": {
+        "Text": "--previous=false",
+        "Description": "If true, print the logs for the previous instance of the container in a pod if it exists."
+    },
+    "-l": {
+        "Text": "-l",
+        "Description": "Selector (label query) to filter on."
+    },
+    "--selector=''": {
+        "Text": "--selector=''",
+        "Description": "Selector (label query) to filter on."
+    },
+    "--since=0s": {
+        "Text": "--since=0s",
+        "Description": "Only return logs newer than a relative duration like 5s, 2m, or 3h. Defaults to all logs. Only one of since-time / since may be used."
+    },
+    "--since-time=''": {
+        "Text": "--since-time=''",
+        "Description": "Only return logs after a specific date (RFC3339). Defaults to all logs. Only one of since-time / since may be used."
+    },
+    "--tail=-1": {
+        "Text": "--tail=-1",
+        "Description": "Lines of recent log file to display. Defaults to -1 with no selector, showing all log lines otherwise 10, if a selector is provided."
+    },
+    "--timestamps=false": {
+        "Text": "--timestamps=false",
+        "Description": "Include timestamps on each line in the log output"
+    },
+    "--version=0": {
+        "Text": "--version=0",
+        "Description": "View the logs of a particular build or deployment by version if greater than zero"
+    }
+}
