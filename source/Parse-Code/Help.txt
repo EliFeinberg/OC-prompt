@@ -1,7 +1,0 @@
-Help provides help for any command in the application.
-Simply type oc help [path to command] for full details.
-
-Usage:
-  oc help [command] [flags]
-
-Use "oc options" for a list of global command-line options (applies to all commands).

@@ -1,14 +1,1 @@
-Display addresses of the control plane and services with label kubernetes.io/cluster-service=true. To further debug and diagnose cluster problems, use 'oc cluster-info dump'.
-
-Usage:
-  oc cluster-info [flags]
-
-Examples:
-  # Print the address of the control plane and cluster services
-  oc cluster-info
-
-Available Commands:
-  dump        Dump relevant information for debugging and diagnosis
-
-Use "oc <command> --help" for more information about a given command.
-Use "oc options" for a list of global command-line options (applies to all commands).
+dump:Dump relevant information for debugging and diagnosis

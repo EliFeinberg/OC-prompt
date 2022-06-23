@@ -1,0 +1,58 @@
+{
+    "--as-current-user=false": {
+        "Text": "--as-current-user=false",
+        "Description": "use the uid and gid of the command executor to run the function in the container"
+    },
+    "--enable-alpha-plugins=false": {
+        "Text": "--enable-alpha-plugins=false",
+        "Description": "enable kustomize plugins"
+    },
+    "--enable-helm=false": {
+        "Text": "--enable-helm=false",
+        "Description": "Enable use of the Helm chart inflator generator."
+    },
+    "--enable-managedby-label=false": {
+        "Text": "--enable-managedby-label=false",
+        "Description": "enable adding app.kubernetes.io/managed-by"
+    },
+    "-e": {
+        "Text": "-e",
+        "Description": "a list of environment variables to be used by functions"
+    },
+    "--env=[]": {
+        "Text": "--env=[]",
+        "Description": "a list of environment variables to be used by functions"
+    },
+    "--helm-command='helm'": {
+        "Text": "--helm-command='helm'",
+        "Description": "helm command (path to executable)"
+    },
+    "--load-restrictor='LoadRestrictionsRootOnly'": {
+        "Text": "--load-restrictor='LoadRestrictionsRootOnly'",
+        "Description": "if set to 'LoadRestrictionsNone', local kustomizations may load files from outside their root. This does, however, break the relocatability of the kustomization."
+    },
+    "--mount=[]": {
+        "Text": "--mount=[]",
+        "Description": "a list of storage options read from the filesystem"
+    },
+    "--network=false": {
+        "Text": "--network=false",
+        "Description": "enable network access for functions that declare it"
+    },
+    "--network-name='bridge'": {
+        "Text": "--network-name='bridge'",
+        "Description": "the docker network to run the container in"
+    },
+    "-o": {
+        "Text": "-o",
+        "Description": "If specified, write output to this path."
+    },
+    "--output=''": {
+        "Text": "--output=''",
+        "Description": "If specified, write output to this path."
+    },
+    "--reorder='legacy'": {
+        "Text": "--reorder='legacy'",
+        "Description": "Reorder the resources just before output. Use 'legacy' to apply a legacy reordering (Namespaces first, Webhooks last, etc). Use 'none' to suppress a final reordering."
+    }
+}

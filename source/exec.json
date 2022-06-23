@@ -1,0 +1,46 @@
+{
+    "-c": {
+        "Text": "-c",
+        "Description": " Container name. If omitted, use the kubectl.kubernetes.io/default-container annotation for selecting the container to be attached or the first container in the pod will be chosen"
+    },
+    "--container=''": {
+        "Text": "--container=''",
+        "Description": " Container name. If omitted, use the kubectl.kubernetes.io/default-container annotation for selecting the container to be attached or the first container in the pod will be chosen"
+    },
+    "-f": {
+        "Text": "-f",
+        "Description": " to use to exec into the resource"
+    },
+    "--filename=[]": {
+        "Text": "--filename=[]",
+        "Description": " to use to exec into the resource"
+    },
+    "--pod-running-timeout=1m0s": {
+        "Text": "--pod-running-timeout=1m0s",
+        "Description": " The length of time (like 5s, 2m, or 3h, higher than zero) to wait until at least one pod is running"
+    },
+    "-q": {
+        "Text": "-q",
+        "Description": " Only print output from the remote session"
+    },
+    "--quiet=false": {
+        "Text": "--quiet=false",
+        "Description": " Only print output from the remote session"
+    },
+    "-i": {
+        "Text": "-i",
+        "Description": " Pass stdin to the container"
+    },
+    "--stdin=false": {
+        "Text": "--stdin=false",
+        "Description": " Pass stdin to the container"
+    },
+    "-t": {
+        "Text": "-t",
+        "Description": " Stdin is a TTY"
+    },
+    "--tty=false": {
+        "Text": "--tty=false",
+        "Description": " Stdin is a TTY"
+    }
+}

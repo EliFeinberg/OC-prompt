@@ -1,0 +1,182 @@
+{
+    "build": {
+        "Text": "build",
+        "Description": "Create a new build"
+    },
+    "clusterresourcequota": {
+        "Text": "clusterresourcequota",
+        "Description": "Create a cluster resource quota"
+    },
+    "clusterrole": {
+        "Text": "clusterrole",
+        "Description": "Create a cluster role"
+    },
+    "clusterrolebinding": {
+        "Text": "clusterrolebinding",
+        "Description": "Create a cluster role binding for a particular cluster role"
+    },
+    "configmap": {
+        "Text": "configmap",
+        "Description": "Create a config map from a local file, directory or literal value"
+    },
+    "cronjob": {
+        "Text": "cronjob",
+        "Description": "Create a cron job with the specified name"
+    },
+    "deployment": {
+        "Text": "deployment",
+        "Description": "Create a deployment with the specified name"
+    },
+    "deploymentconfig": {
+        "Text": "deploymentconfig",
+        "Description": "Create a deployment config with default options that uses a given image"
+    },
+    "identity": {
+        "Text": "identity",
+        "Description": "Manually create an identity (only needed if automatic creation is disabled)"
+    },
+    "imagestream": {
+        "Text": "imagestream",
+        "Description": "Create a new empty image stream"
+    },
+    "imagestreamtag": {
+        "Text": "imagestreamtag",
+        "Description": "Create a new image stream tag"
+    },
+    "ingress": {
+        "Text": "ingress",
+        "Description": "Create an ingress with the specified name"
+    },
+    "job": {
+        "Text": "job",
+        "Description": "Create a job with the specified name"
+    },
+    "namespace": {
+        "Text": "namespace",
+        "Description": "Create a namespace with the specified name"
+    },
+    "poddisruptionbudget": {
+        "Text": "poddisruptionbudget",
+        "Description": "Create a pod disruption budget with the specified name"
+    },
+    "priorityclass": {
+        "Text": "priorityclass",
+        "Description": "Create a priority class with the specified name"
+    },
+    "quota": {
+        "Text": "quota",
+        "Description": "Create a quota with the specified name"
+    },
+    "role": {
+        "Text": "role",
+        "Description": "Create a role with single rule"
+    },
+    "rolebinding": {
+        "Text": "rolebinding",
+        "Description": "Create a role binding for a particular role or cluster role"
+    },
+    "route": {
+        "Text": "route",
+        "Description": "Expose containers externally via secured routes"
+    },
+    "secret": {
+        "Text": "secret",
+        "Description": "Create a secret using specified subcommand"
+    },
+    "service": {
+        "Text": "service",
+        "Description": "Create a service using a specified subcommand"
+    },
+    "serviceaccount": {
+        "Text": "serviceaccount",
+        "Description": "Create a service account with the specified name"
+    },
+    "user": {
+        "Text": "user",
+        "Description": "Manually create a user (only needed if automatic creation is disabled)"
+    },
+    "useridentitymapping": {
+        "Text": "useridentitymapping",
+        "Description": "Manually map an identity to a user"
+    },
+    "--allow-missing-template-keys=true": {
+        "Text": "--allow-missing-template-keys=true",
+        "Description": " If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats."
+    },
+    "--dry-run='none'": {
+        "Text": "--dry-run='none'",
+        "Description": " Must be 'none', 'server', or 'client'. If client strategy, only print the object that would be sent, without sending it. If server strategy, submit server-side request without persisting the resource."
+    },
+    "--edit=false": {
+        "Text": "--edit=false",
+        "Description": " Edit the API resource before creating"
+    },
+    "--field-manager='kubectl-create'": {
+        "Text": "--field-manager='kubectl-create'",
+        "Description": " Name of the manager used to track field ownership."
+    },
+    "-f": {
+        "Text": "-f",
+        "Description": " Filename, directory, or URL to files to use to create the resource"
+    },
+    "--filename=[]": {
+        "Text": "--filename=[]",
+        "Description": " Filename, directory, or URL to files to use to create the resource"
+    },
+    "-k": {
+        "Text": "-k",
+        "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
+    },
+    "--kustomize=''": {
+        "Text": "--kustomize=''",
+        "Description": " Process the kustomization directory. This flag can't be used together with -f or -R."
+    },
+    "-o": {
+        "Text": "-o",
+        "Description": " Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
+    },
+    "--output=''": {
+        "Text": "--output=''",
+        "Description": " Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
+    },
+    "--raw=''": {
+        "Text": "--raw=''",
+        "Description": " Raw URI to POST to the server.  Uses the transport specified by the kubeconfig file."
+    },
+    "-R": {
+        "Text": "-R",
+        "Description": " Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
+    },
+    "--recursive=false": {
+        "Text": "--recursive=false",
+        "Description": " Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
+    },
+    "--save-config=false": {
+        "Text": "--save-config=false",
+        "Description": " If true, the configuration of current object will be saved in its annotation. Otherwise, the annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future."
+    },
+    "-l": {
+        "Text": "-l",
+        "Description": " Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+    },
+    "--selector=''": {
+        "Text": "--selector=''",
+        "Description": " Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+    },
+    "--show-managed-fields=false": {
+        "Text": "--show-managed-fields=false",
+        "Description": " If true, keep the managedFields when printing objects in JSON or YAML format."
+    },
+    "--template=''": {
+        "Text": "--template=''",
+        "Description": " Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview]."
+    },
+    "--validate=false": {
+        "Text": "--validate=false",
+        "Description": " If true, use a schema to validate the input before sending it"
+    },
+    "--windows-line-endings=false": {
+        "Text": "--windows-line-endings=false",
+        "Description": " Only relevant if --edit=true. Defaults to the line ending native to your platform."
+    }
+}

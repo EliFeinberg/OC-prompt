@@ -1,42 +1,12 @@
-Import the latest image information from a tag in a container image registry.
-
- Image streams allow you to control which images are rolled out to your builds and applications. This command fetches the latest version of an image from a remote repository and updates the image stream tag if it does not match the previous value. Running the command multiple times will not create duplicate entries. When importing an image, only the image metadata is copied, not the image contents.
-
- If you want to change the image stream tag or provide more advanced options, see the 'tag' command.
-
-Usage:
-  oc import-image IMAGESTREAM[:TAG] [flags]
-
-Examples:
-  # Import tag latest into a new image stream
-  oc import-image mystream --from=registry.io/repo/image:latest --confirm
-  
-  # Update imported data for tag latest in an already existing image stream
-  oc import-image mystream
-  
-  # Update imported data for tag stable in an already existing image stream
-  oc import-image mystream:stable
-  
-  # Update imported data for all tags in an existing image stream
-  oc import-image mystream --all
-  
-  # Import all tags into a new image stream
-  oc import-image mystream --from=registry.io/repo/image --all --confirm
-  
-  # Import all tags into a new image stream using a custom timeout
-  oc --request-timeout=5m import-image mystream --from=registry.io/repo/image --all --confirm
-
-Options:
-      --all=false: If true, import all tags from the provided source on creation or if --from is specified
-      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats.
-      --confirm=false: If true, allow the image stream import location to be set or changed
-      --dry-run=false: Fetch information about images without creating or updating an image stream.
-      --from='': A container image repository to import images from
-      --insecure=false: If true, allow importing from registries that have invalid HTTPS certificates or are hosted via HTTP. This flag will take precedence over the insecure annotation.
-  -o, --output='': Output format. One of: json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file.
-      --reference-policy='source': Allow to request pullthrough for external image when set to 'local'. Defaults to 'source'.
-      --scheduled=false: Set each imported container image to be periodically imported from a remote repository. Defaults to false.
-      --show-managed-fields=false: If true, keep the managedFields when printing objects in JSON or YAML format.
-      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
-
-Use "oc options" for a list of global command-line options (applies to all commands).
+--all=false: If true, import all tags from the provided source on creation or if --from is specified
+--allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats.
+--confirm=false: If true, allow the image stream import location to be set or changed
+--dry-run=false: Fetch information about images without creating or updating an image stream.
+--from='': A container image repository to import images from
+--insecure=false: If true, allow importing from registries that have invalid HTTPS certificates or are hosted via HTTP. This flag will take precedence over the insecure annotation.
+-o: Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file.
+--output='': Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file.
+--reference-policy='source': Allow to request pullthrough for external image when set to 'local'. Defaults to 'source'.
+--scheduled=false: Set each imported container image to be periodically imported from a remote repository. Defaults to false.
+--show-managed-fields=false: If true, keep the managedFields when printing objects in JSON or YAML format.
+--template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http//golang.org/pkg/text/template/#pkg-overview].

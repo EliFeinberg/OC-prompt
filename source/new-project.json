@@ -1,0 +1,14 @@
+{
+    "--description=''": {
+        "Text": "--description=''",
+        "Description": " Project description"
+    },
+    "--display-name=''": {
+        "Text": "--display-name=''",
+        "Description": " Project display name"
+    },
+    "--skip-config-write=false": {
+        "Text": "--skip-config-write=false",
+        "Description": " If true, the project will not be set as a cluster entry in kubeconfig after being created"
+    }
+}

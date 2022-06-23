@@ -1,0 +1,70 @@
+{
+    "--accept-hosts=''": {
+        "Text": "--accept-hosts=''",
+        "Description": " Regular expression for hosts that the proxy should accept."
+    },
+    "--accept-paths=''": {
+        "Text": "--accept-paths=''",
+        "Description": " Regular expression for paths that the proxy should accept."
+    },
+    "--address=''": {
+        "Text": "--address=''",
+        "Description": " The IP address on which to serve on."
+    },
+    "--api-prefix=''": {
+        "Text": "--api-prefix=''",
+        "Description": " Prefix to serve the proxied API under."
+    },
+    "--append-server-path=false": {
+        "Text": "--append-server-path=false",
+        "Description": " If true, enables automatic path appending of the kube context server path to each request."
+    },
+    "--disable-filter=false": {
+        "Text": "--disable-filter=false",
+        "Description": " If true, disable request filtering in the proxy. This is dangerous, and can leave you vulnerable to XSRF attacks, when used with an accessible port."
+    },
+    "--keepalive=0s": {
+        "Text": "--keepalive=0s",
+        "Description": " keepalive specifies the keep-alive period for an active network connection. Set to 0 to disable keepalive."
+    },
+    "-p": {
+        "Text": "-p",
+        "Description": " The port on which to run the proxy. Set to 0 to pick a random port."
+    },
+    "--port=''": {
+        "Text": "--port=''",
+        "Description": " The port on which to run the proxy. Set to 0 to pick a random port."
+    },
+    "--reject-methods=''": {
+        "Text": "--reject-methods=''",
+        "Description": " Regular expression for HTTP methods that the proxy should reject (example --reject-methods=\"POST,PUT,PATCH\"). "
+    },
+    "--reject-paths=''": {
+        "Text": "--reject-paths=''",
+        "Description": " Regular expression for paths that the proxy should reject. Paths specified here will be rejected even accepted by --accept-paths."
+    },
+    "-u": {
+        "Text": "-u",
+        "Description": " Unix socket on which to run the proxy."
+    },
+    "--unix-socket=''": {
+        "Text": "--unix-socket=''",
+        "Description": " Unix socket on which to run the proxy."
+    },
+    "-w": {
+        "Text": "-w",
+        "Description": " Also serve static files from the given directory under the specified prefix."
+    },
+    "--www=''": {
+        "Text": "--www=''",
+        "Description": " Also serve static files from the given directory under the specified prefix."
+    },
+    "-P": {
+        "Text": "-P",
+        "Description": " Prefix to serve static files under, if static file directory is specified."
+    },
+    "--www-prefix='static'": {
+        "Text": "--www-prefix='static'",
+        "Description": " Prefix to serve static files under, if static file directory is specified."
+    }
+}

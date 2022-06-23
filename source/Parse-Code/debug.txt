@@ -1,74 +1,37 @@
-Launch a command shell to debug a running application.
-
- When debugging images and setup problems, it's useful to get an exact copy of a running pod configuration and troubleshoot with a shell. Since a pod that is failing may not be started and not accessible to 'rsh' or 'exec', the 'debug' command makes it easy to create a carbon copy of that setup.
-
- The default mode is to start a shell inside of the first container of the referenced pod. The started pod will be a copy of your source pod, with labels stripped, the command changed to '/bin/sh' for Linux containers or 'cmd.exe' for Windows containers, and readiness and liveness checks disabled. If you just want to run a command, add '--' and a command to run. Passing a command will not create a TTY or send STDIN by default. Other flags are supported for altering the container or pod in common ways.
-
- A common problem running containers is a security policy that prohibits you from running as a root user on the cluster. You can use this command to test running a pod as non-root (with --as-user) or to run a non-root pod as root (with --as-root).
-
- You may invoke other types of objects besides pods - any controller resource that creates a pod (like a deployment, build, or job), objects that can host pods (like nodes), or resources that can be used to create pods (such as image stream tags), or simply pass '--image=IMAGE' to start a simple shell session in an image with a shell program
-
- The debug pod is deleted when the remote command completes or the user interrupts the shell.
-
-Usage:
-  oc debug RESOURCE/NAME [ENV1=VAL1 ...] [-c CONTAINER] [flags] [-- COMMAND]
-
-Examples:
-  # Start a shell session into a pod using the OpenShift tools image
-  oc debug
-  
-  # Debug a currently running deployment by creating a new pod
-  oc debug deploy/test
-  
-  # Debug a node as an administrator
-  oc debug node/master-1
-  
-  # Launch a shell in a pod using the provided image stream tag
-  oc debug istag/mysql:latest -n openshift
-  
-  # Test running a job as a non-root user
-  oc debug job/test --as-user=1000000
-  
-  # Debug a specific failing container by running the env command in the 'second' container
-  oc debug daemonset/test -c second -- /bin/env
-  
-  # See the pod that would be created to debug
-  oc debug mypod-9xbc -o yaml
-  
-  # Debug a resource but launch the debug pod in another namespace
-  # Note: Not all resources can be debugged using --to-namespace without modification. For example,
-  # volumes and service accounts are namespace-dependent. Add '-o yaml' to output the debug pod definition
-  # to disk.  If necessary, edit the definition then run 'oc debug -f -' or run without --to-namespace
-  oc debug mypod-9xbc --to-namespace testns
-
-Options:
-      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats.
-      --as-root=false: If true, try to run the container as the root user
-      --as-user=-1: Try to run the container as a specific user UID (note: admins may limit your ability to use this flag)
-  -c, --container='': Container name; defaults to first container
-      --dry-run='none': Must be "none", "server", or "client". If client strategy, only print the object that would be sent, without sending it. If server strategy, submit server-side request without persisting the resource.
-  -f, --filename=[]: Filename, directory, or URL to files to read a template
-      --image='': Override the image used by the targeted container.
-      --image-stream='': Specify an image stream (namespace/name:tag) containing a debug image to run.
-      --keep-annotations=false: If true, keep the original pod annotations
-      --keep-init-containers=true: Run the init containers for the pod. Defaults to true.
-      --keep-labels=false: If true, keep the original pod labels
-      --keep-liveness=false: If true, keep the original pod liveness probes
-      --keep-readiness=false: If true, keep the original pod readiness probes
-      --keep-startup=false: If true, keep the original startup probes
-  -k, --kustomize='': Process the kustomization directory. This flag can't be used together with -f or -R.
-  -I, --no-stdin=false: Bypasses passing STDIN to the container, defaults to true if no command specified
-  -T, --no-tty=false: Disable pseudo-terminal allocation
-      --node-name='': Set a specific node to run on - by default the pod will run on any valid node
-      --one-container=false: If true, run only the selected container, remove all others
-  -o, --output='': Output format. One of: json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file.
-      --preserve-pod=false: If true, the pod will not be deleted after the debug command exits.
-  -q, --quiet=false: No informational messages will be printed.
-  -R, --recursive=false: Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.
-      --show-labels=false: When printing, show all labels as the last column (default hide labels column)
-      --show-managed-fields=false: If true, keep the managedFields when printing objects in JSON or YAML format.
-      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
-      --to-namespace='': Override the namespace to create the pod into (instead of using --namespace).
-  -t, --tty=false: Force a pseudo-terminal to be allocated
-
-Use "oc options" for a list of global command-line options (applies to all commands).
+--allow-missing-template-keys=true:If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats.
+--as-root=false:If true, try to run the container as the root user
+--as-user=-1:Try to run the container as a specific user UID (note admins may limit your ability to use this flag)
+-c:Container name; defaults to first container
+--container='':Container name; defaults to first container
+--dry-run='none':Must be 'none', 'server', or 'client'. If client strategy, only print the object that would be sent, without sending it. If server strategy, submit server-side request without persisting the resource.
+-f:Filename, directory, or URL to files to read a template
+--filename=[]:Filename, directory, or URL to files to read a template
+--image='':Override the image used by the targeted container.
+--image-stream='':Specify an image stream (namespace/nametag) containing a debug image to run.
+--keep-annotations=false:If true, keep the original pod annotations
+--keep-init-containers=true:Run the init containers for the pod. Defaults to true.
+--keep-labels=false:If true, keep the original pod labels
+--keep-liveness=false:If true, keep the original pod liveness probes
+--keep-readiness=false:If true, keep the original pod readiness probes
+--keep-startup=false:If true, keep the original startup probes
+-k:Process the kustomization directory. This flag can't be used together with -f or -R.
+--kustomize='':Process the kustomization directory. This flag can't be used together with -f or -R.
+-I:Disable pseudo-terminal allocation
+--no-stdin=false:Bypasses passing STDIN to the container, defaults to true if no command specified
+-T:Disable pseudo-terminal allocation
+--no-tty=false:Disable pseudo-terminal allocation
+--node-name='':Set a specific node to run on - by default the pod will run on any valid node
+--one-container=false:If true, run only the selected container, remove all others
+-o:Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file.
+--output='':Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file.
+--preserve-pod=false:If true, the pod will not be deleted after the debug command exits.
+-q:No informational messages will be printed.
+--quiet=false:No informational messages will be printed.
+-R:Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.
+--recursive=false:Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.
+--show-labels=false:When printing, show all labels as the last column (default hide labels column)
+--show-managed-fields=false:If true, keep the managedFields when printing objects in JSON or YAML format.
+--template='':Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http//golang.org/pkg/text/template/#pkg-overview].
+--to-namespace='':Override the namespace to create the pod into (instead of using --namespace).
+-t:Force a pseudo-terminal to be allocated
+--tty=false:Force a pseudo-terminal to be allocated
