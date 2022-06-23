@@ -1,0 +1,24 @@
+  upgrade:Upgrade a cluster
+  top:Show usage statistics of resources on the server
+  must-gather:Launch a new instance of a pod for gathering debug information
+  inspect:Collect debugging data for a given resource
+  drain:Drain node in preparation for maintenance
+  cordon:Mark node as unschedulable
+  uncordon:Mark node as schedulable
+  taint:Update the taints on one or more nodes
+  node-logs:Display and filter node logs
+  new-project:Create a new project
+  policy:Manage cluster authorization and security policy
+  groups:Manage groups
+  certificate:Approve or reject certificate requests
+  pod-network:Manage pod network
+  prune:Remove older versions of resources from the server
+  migrate:Migrate data in the cluster
+  create-kubeconfig:Create a basic .kubeconfig file from client certs
+  create-bootstrap-project-e:Create a bootstrap project template
+  create-login-template: Create a login template
+  create-provider-selection-e:Create a provider selection template
+  create-error-template:Create an error page template
+  build-chain:Output the inputs and dependencies of your builds
+  catalog:Tools for managing the OpenShift OLM Catalogs
+  verify-image-signature:Verify the image identity contained in the image 

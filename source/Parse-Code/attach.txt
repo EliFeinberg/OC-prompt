@@ -1,0 +1,9 @@
+-c: Container name. If omitted, use the kubectl.kubernetes.io/default-container annotation for selecting the container to be attached or the first container in the pod will be chosen
+--container='': Container name. If omitted, use the kubectl.kubernetes.io/default-container annotation for selecting the container to be attached or the first container in the pod will be chosen
+--pod-running-timeout=1m0s: The length of time (like 5s, 2m, or 3h, higher than zero) to wait until at least one pod is running
+-q:Only print output from the remote session
+--quiet=false: Only print output from the remote session
+-i:Pass stdin to the container
+--stdin=false: Pass stdin to the container
+-t:Stdin is a TTY
+--tty=false: Stdin is a TTY

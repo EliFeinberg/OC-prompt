@@ -1,0 +1,3 @@
+--dump-logs=false:Specify if the build logs for the cancelled build should be shown.
+--restart=false:Specify if a new build should be created after the current build is cancelled.
+--state=[new,pending,running]:Only cancel builds in this state

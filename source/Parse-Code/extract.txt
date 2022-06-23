@@ -1,0 +1,31 @@
+Extract files out of secrets and config maps.
+
+ The extract command makes it easy to download the contents of a config map or secret into a directory. Each key in the config map or secret is created as a separate file with the name of the key, as it is when you mount a secret or config map into a container.
+
+ You may extract the contents of a secret or config map to standard out by passing '-' to the --to option. The names of each key will be written to standard error.
+
+ You can limit which keys are extracted with the --keys=NAME flag, or set the directory to extract to with --to=DIRECTORY.
+
+Usage:
+  oc extract RESOURCE/NAME [--to=DIRECTORY] [--keys=KEY ...] [flags]
+
+Examples:
+  # Extract the secret "test" to the current directory
+  oc extract secret/test
+  
+  # Extract the config map "nginx" to the /tmp directory
+  oc extract configmap/nginx --to=/tmp
+  
+  # Extract the config map "nginx" to STDOUT
+  oc extract configmap/nginx --to=-
+  
+  # Extract only the key "nginx.conf" from config map "nginx" to the /tmp directory
+  oc extract configmap/nginx --to=/tmp --keys=nginx.conf
+
+Options:
+      --confirm=false: If true, overwrite files that already exist.
+  -f, --filename=[]: Filename, directory, or URL to file to identify to extract the resource.
+      --keys=[]: An optional list of keys to extract (default is all keys).
+      --to='.': Directory to extract files to.
+
+Use "oc options" for a list of global command-line options (applies to all commands).

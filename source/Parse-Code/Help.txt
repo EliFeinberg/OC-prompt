@@ -1,8 +1,5 @@
-OpenShift Client
-
-This client helps you develop, build, deploy, and run your applications on any
-OpenShift or Kubernetes cluster. It also includes the administrative
-commands for managing a cluster under the 'adm' subcommand.
+Help provides help for any command in the application.
+Simply type oc help [path to command] for full details.
 
 Usage:
   oc [flags]
@@ -84,5 +81,4 @@ Other Commands:
   plugin          Provides utilities for interacting with plugins.
   version         Print the client and server version information
 
-Use "oc <command> --help" for more information about a given command.
 Use "oc options" for a list of global command-line options (applies to all commands).

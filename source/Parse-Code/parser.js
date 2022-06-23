@@ -5,7 +5,7 @@ const result = {};
 const keys = ["\"Text\"", "\"Description\""];
 
 // Read data
-const readStream = fs.createReadStream("GlobalOp.txt");
+const readStream = fs.createReadStream("cancel-build.txt");
 
 // Parser
 const parser = csv.parse({ delimiter: ":" });
@@ -29,6 +29,14 @@ parser.on("end", () => {
 
 // const json = JSON.stringify(result);
 // fs.writeFile('test.json', json, 'utf8')
+
+// fs.writeFile('api-resources.json', console.log(result), err => {
+//     if (err) {
+//       console.error(err)
+//       return
+//     }
+//     //file written successfully
+//   })
 
 readStream.pipe(parser);
 
