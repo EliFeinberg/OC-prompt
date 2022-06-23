@@ -71,3 +71,21 @@ func ParseFileForCommandList(path string) []string {
 	}
 	return Commands
 }
+
+// Taken from online resource
+// https://play.golang.org/p/Qg_uv_inCek
+// contains checks if a string is present in a slice
+func StringInList(elem string, list []string) bool {
+	for _, v := range list {
+		if v == elem {
+			return true
+		}
+	}
+	return false
+}
+
+// Adapted from https://stackoverflow.com/questions/37334119/how-to-delete-an-element-from-a-slice-in-golang
+func Remove(list []prompt.Suggest, index int) []prompt.Suggest {
+	list[index] = list[len(list)-1]
+	return list[:len(list)-1]
+}

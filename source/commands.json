@@ -194,6 +194,9 @@
         "Description": "Provides utilities for interacting with plugins" },
     "version":
         { "Text": "version",
-        "Description": "Print the client and server version information" } 
+        "Description": "Print the client and server version information" },
+    "exit":
+    { "Text": "exit",
+    "Description": "Exit OC-Prompt"}
     
 }
