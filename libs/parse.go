@@ -16,6 +16,7 @@ func ParseFiletoSuggest(path string) []prompt.Suggest {
 	contents, err := os.Open(path)
 	if err != nil {
 		fmt.Println(err)
+		return []prompt.Suggest{}
 	}
 	// Defer close so fd is closed at termination of function
 	defer contents.Close()

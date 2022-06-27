@@ -13,19 +13,28 @@ import (
 var OC_COMMANDS_SUGGEST []prompt.Suggest
 var OC_COMMANDS []string
 var GLOBAL_OP []prompt.Suggest
+var GlobalFlags = false
+var prune = true
 
 func completer(d prompt.Document) []prompt.Suggest {
 	CMDargs := strings.Split(d.Text, "")
 	var s []prompt.Suggest
 
 	if libs.StringInList(CMDargs[0], OC_COMMANDS) {
-		if CMDargs[0] == "api-versions"{
-			// Do nothing
+		if CMDargs[0] == "api-versions" {
+			return []prompt.Suggest{}
+		} else if CMDargs[0] == "exit" {
+			return []prompt.Suggest{}
 		} else {
-			s = libs.ParseFiletoSuggest("source/login.json")
+			s = libs.ParseFiletoSuggest("source/" + CMDargs[0] + ".json")
 		}
-		s = append(s, GLOBAL_OP...)
-		pruneUsedArgs(CMDargs, &s)
+		// Extra Settings for Customization
+		if GlobalFlags {
+			s = append(s, GLOBAL_OP...)
+		}
+		if prune {
+			pruneUsedArgs(CMDargs, &s)
+		}
 
 	} else {
 		s = OC_COMMANDS_SUGGEST
@@ -59,10 +68,10 @@ func main() {
 			prompt.OptionTitle("RHOCP CLI"),
 			prompt.OptionSelectedDescriptionTextColor(prompt.DarkGray))
 		CMDargs := strings.Split(t, "")
-		if CMDargs[0] == "exit"{
+		if CMDargs[0] == "exit" {
 			os.Exit(0)
 		}
-		if CMDargs[0] == "clear"{
+		if CMDargs[0] == "clear" {
 			ps = exec.Command("clear")
 		} else {
 			ps = exec.Command("oc", CMDargs...)
