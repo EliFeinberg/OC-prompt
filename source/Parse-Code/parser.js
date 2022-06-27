@@ -29,9 +29,26 @@ parser.on("end", () => {
 
 readStream.pipe(parser);
 
+
+var myData = [];
+rows.each(function (index) {
+    var obj = { 
+        id: $this.find('.elementOne').val(),
+        name: $this.find('.elementTwo').text()
+    };
+    myData.push(obj);
+});
+
+
+
+
+
+
 // 1.run "curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh -o install_nvm.sh"
 // 2.run "bash install_nvm.sh"
 // 3. copy end script and run
 // 4. go to file and run "node parser.js"
 // 5. turn all '"to "and turn all "' to "
 // 6. turn all ' to "
+// 7. turn all \" to '
+// 8. turn all ': to '":
