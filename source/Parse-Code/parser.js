@@ -8,7 +8,7 @@ const keys = ["\"Text\"", "\"Description\""];
 const readStream = fs.createReadStream("whoami.txt");
 
 // Parser
-const parser = csv.parse({ delimiter: ":" });
+const parser = csv.parse({ delimiter: ":"});
 
 
 parser.on("data", (chunk) => {
@@ -33,5 +33,5 @@ readStream.pipe(parser);
 // 2.run "bash install_nvm.sh"
 // 3. copy end script and run
 // 4. go to file and run "node parser.js"
-// 5. turn all '" to " and turn all "' to "
+// 5. turn all '"to "and turn all "' to "
 // 6. turn all ' to "

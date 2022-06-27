@@ -15,11 +15,11 @@ var OC_COMMANDS []string
 var GLOBAL_OP []prompt.Suggest
 
 func completer(d prompt.Document) []prompt.Suggest {
-	CMDargs := strings.Split(d.Text, " ")
+	CMDargs := strings.Split(d.Text, "")
 	var s []prompt.Suggest
 
 	if libs.StringInList(CMDargs[0], OC_COMMANDS) {
-		if CMDargs[0] == "api-versions" {
+		if CMDargs[0] == "api-versions"{
 			// Do nothing
 		} else {
 			s = libs.ParseFiletoSuggest("source/login.json")
@@ -58,11 +58,11 @@ func main() {
 			completer,
 			prompt.OptionTitle("RHOCP CLI"),
 			prompt.OptionSelectedDescriptionTextColor(prompt.DarkGray))
-		CMDargs := strings.Split(t, " ")
-		if CMDargs[0] == "exit" {
+		CMDargs := strings.Split(t, "")
+		if CMDargs[0] == "exit"{
 			os.Exit(0)
 		}
-		if CMDargs[0] == "clear" {
+		if CMDargs[0] == "clear"{
 			ps = exec.Command("clear")
 		} else {
 			ps = exec.Command("oc", CMDargs...)

@@ -3,4 +3,4 @@ The commands grouped here are under development and may change without notice.
 Usage:
   oc ex [flags]
 
-Use "oc options" for a list of global command-line options (applies to all commands).
+Use "oc options"for a list of global command-line options (applies to all commands).

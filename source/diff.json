@@ -1,46 +1,46 @@
 {
     "--field-manager='kubectl-client-side-apply'": {
         "Text": "--field-manager='kubectl-client-side-apply'",
-        "Description": " Name of the manager used to track field ownership."
+        "Description": "Name of the manager used to track field ownership."
     },
     "-f": {
         "Text": "-f",
-        "Description": " Filename, directory, or URL to files contains the configuration to diff"
+        "Description": "Filename, directory, or URL to files contains the configuration to diff"
     },
     "--filename=[]": {
         "Text": "--filename=[]",
-        "Description": " Filename, directory, or URL to files contains the configuration to diff"
+        "Description": "Filename, directory, or URL to files contains the configuration to diff"
     },
     "--force-conflicts=false": {
         "Text": "--force-conflicts=false",
-        "Description": " If true, server-side apply will force the changes against conflicts."
+        "Description": "If true, server-side apply will force the changes against conflicts."
     },
     "-k": {
         "Text": "-k",
-        "Description": " Process the kustomization directory. This flag can't be used together with -f or -R."
+        "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
     },
     "--kustomize=''": {
         "Text": "--kustomize=''",
-        "Description": " Process the kustomization directory. This flag can't be used together with -f or -R."
+        "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
     },
     "-R": {
         "Text": "-R",
-        "Description": " Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
+        "Description": "Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
     },
     "--recursive=false": {
         "Text": "--recursive=false",
-        "Description": " Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
+        "Description": "Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
     },
     "-l": {
         "Text": "-l",
-        "Description": " Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+        "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
     },
     "--selector=''": {
         "Text": "--selector=''",
-        "Description": " Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+        "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
     },
     "--server-side=false": {
         "Text": "--server-side=false",
-        "Description": " If true, apply runs in the server instead of the client."
+        "Description": "If true, apply runs in the server instead of the client."
     }
 }

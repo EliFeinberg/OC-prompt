@@ -1,54 +1,54 @@
 {
     "--compress=false": {
         "Text": "--compress=false",
-        "Description": " compress file data during the transfer"
+        "Description": "compress file data during the transfer"
     },
     "-c": {
         "Text": "-c",
-        "Description": " Container within the pod"
+        "Description": "Container within the pod"
     },
     "--container=''": {
         "Text": "--container=''",
-        "Description": " Container within the pod"
+        "Description": "Container within the pod"
     },
     "--delete=false": {
         "Text": "--delete=false",
-        "Description": " If true, delete files not present in source"
+        "Description": "If true, delete files not present in source"
     },
     "--exclude=[]": {
         "Text": "--exclude=[]",
-        "Description": " When specified, exclude files matching pattern"
+        "Description": "When specified, exclude files matching pattern"
     },
     "--include=[]": {
         "Text": "--include=[]",
-        "Description": " When specified, include files matching pattern"
+        "Description": "When specified, include files matching pattern"
     },
     "--no-perms=false": {
         "Text": "--no-perms=false",
-        "Description": " If true, do not transfer permissions"
+        "Description": "If true, do not transfer permissions"
     },
     "--progress=false": {
         "Text": "--progress=false",
-        "Description": " If true, show progress during transfer"
+        "Description": "If true, show progress during transfer"
     },
     "-q": {
         "Text": "-q",
-        "Description": " Suppress non-error messages"
+        "Description": "Suppress non-error messages"
     },
     "--quiet=false": {
         "Text": "--quiet=false",
-        "Description": " Suppress non-error messages"
+        "Description": "Suppress non-error messages"
     },
     "--strategy=''": {
         "Text": "--strategy=''",
-        "Description": " Specify which strategy to use for copy: rsync, rsync-daemon, or tar"
+        "Description": "Specify which strategy to use for copy: rsync, rsync-daemon, or tar"
     },
     "-w": {
         "Text": "-w",
-        "Description": " Watch directory for changes and resync automatically"
+        "Description": "Watch directory for changes and resync automatically"
     },
     "--watch=false": {
         "Text": "--watch=false",
-        "Description": " Watch directory for changes and resync automatically"
+        "Description": "Watch directory for changes and resync automatically"
     }
 }

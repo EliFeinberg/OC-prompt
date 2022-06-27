@@ -1,22 +1,22 @@
 {
     "-A": {
         "Text": "-A",
-        "Description": " If true, display status for all namespaces (must have cluster admin)"
+        "Description": "If true, display status for all namespaces (must have cluster admin)"
     },
     "--all-namespaces=false": {
         "Text": "--all-namespaces=false",
-        "Description": " If true, display status for all namespaces (must have cluster admin)"
+        "Description": "If true, display status for all namespaces (must have cluster admin)"
     },
     "-o": {
         "Text": "-o",
-        "Description": " Output format. One of: dot."
+        "Description": "Output format. One of: dot."
     },
     "--output=''": {
         "Text": "--output=''",
-        "Description": " Output format. One of: dot."
+        "Description": "Output format. One of: dot."
     },
     "--suggest=false": {
         "Text": "--suggest=false",
-        "Description": " See details for resolving issues."
+        "Description": "See details for resolving issues."
     }
 }
