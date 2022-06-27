@@ -1,31 +1,13 @@
-Copy local files to or from a pod container.
-
- This command will copy local files to or from a remote container. It only copies the changed files using the rsync command from your OS. To ensure optimum performance, install rsync locally. In UNIX systems, use your package manager. In Windows, install cwRsync from https://www.itefix.net/cwrsync.
-
- If no container is specified, the first container of the pod is used for the copy.
-
- The following flags are passed to rsync by default: --archive --no-owner --no-group --omit-dir-times --numeric-ids
-
-Usage:
-  oc rsync SOURCE DESTINATION [flags]
-
-Examples:
-  # Synchronize a local directory with a pod directory
-  oc rsync ./local/dir/ POD:/remote/dir
-  
-  # Synchronize a pod directory with a local directory
-  oc rsync POD:/remote/dir/ ./local/dir
-
-Options:
-      --compress=false: compress file data during the transfer
-  -c, --container='': Container within the pod
-      --delete=false: If true, delete files not present in source
-      --exclude=[]: When specified, exclude files matching pattern
-      --include=[]: When specified, include files matching pattern
-      --no-perms=false: If true, do not transfer permissions
-      --progress=false: If true, show progress during transfer
-  -q, --quiet=false: Suppress non-error messages
-      --strategy='': Specify which strategy to use for copy: rsync, rsync-daemon, or tar
-  -w, --watch=false: Watch directory for changes and resync automatically
-
-Use "oc options" for a list of global command-line options (applies to all commands).
+--compress=false: compress file data during the transfer
+-c: Container within the pod
+--container='': Container within the pod
+--delete=false: If true, delete files not present in source
+--exclude=[]: When specified, exclude files matching pattern
+--include=[]: When specified, include files matching pattern
+--no-perms=false: If true, do not transfer permissions
+--progress=false: If true, show progress during transfer
+-q: Suppress non-error messages
+--quiet=false: Suppress non-error messages
+--strategy='': Specify which strategy to use for copy rsync, rsync-daemon, or tar
+-w: Watch directory for changes and resync automatically
+--watch=false: Watch directory for changes and resync automatically

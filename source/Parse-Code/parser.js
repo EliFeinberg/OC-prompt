@@ -5,7 +5,7 @@ const result = {};
 const keys = ["\"Text\"", "\"Description\""];
 
 // Read data
-const readStream = fs.createReadStream("proxy.txt");
+const readStream = fs.createReadStream("whoami.txt");
 
 // Parser
 const parser = csv.parse({ delimiter: ":" });
@@ -26,17 +26,6 @@ result[text] = {};
 parser.on("end", () => {
     console.log(result);
 });
-
-// const json = JSON.stringify(result);
-// fs.writeFile('test.json', json, 'utf8')
-
-// fs.writeFile('api-resources.json', console.log(result), err => {
-//     if (err) {
-//       console.error(err)
-//       return
-//     }
-//     //file written successfully
-//   })
 
 readStream.pipe(parser);
 

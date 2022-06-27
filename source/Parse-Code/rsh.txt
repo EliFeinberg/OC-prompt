@@ -1,35 +1,10 @@
-Open a remote shell session to a container.
-
- This command will attempt to start a shell session in a pod for the specified resource. It works with pods, deployment configs, deployments, jobs, daemon sets, replication controllers and replica sets. Any of the aforementioned resources (apart from pods) will be resolved to a ready pod. It will default to the first container if none is specified, and will attempt to use '/bin/sh' as the default shell. You may pass any flags supported by this command before the resource name, and an optional command after the resource name, which will be executed instead of a login shell. A TTY will be automatically allocated if standard input is interactive - use -t and -T to override. A TERM variable is sent to the environment where the shell (or command) will be executed. By default its value is the same as the TERM variable from the local environment; if not set, 'xterm' is used.
-
- Note, some containers may not include a shell - use 'oc exec' if you need to run commands directly.
-
-Usage:
-  oc rsh [-c CONTAINER] [flags] (POD | TYPE/NAME) COMMAND [args...]
-
-Examples:
-  # Open a shell session on the first container in pod 'foo'
-  oc rsh foo
-  
-  # Open a shell session on the first container in pod 'foo' and namespace 'bar'
-  # (Note that oc client specific arguments must come before the resource name and its arguments)
-  oc rsh -n bar foo
-  
-  # Run the command 'cat /etc/resolv.conf' inside pod 'foo'
-  oc rsh foo cat /etc/resolv.conf
-  
-  # See the configuration of your internal registry
-  oc rsh dc/docker-registry cat config.yml
-  
-  # Open a shell session on the container named 'index' inside a pod of your job
-  oc rsh -c index job/sheduled
-
-Options:
-  -c, --container='': Container name; defaults to first container
-  -f, --filename=[]: to use to rsh into the resource
-  -T, --no-tty=false: Disable pseudo-terminal allocation
-      --pod-running-timeout=1m0s: The length of time (like 5s, 2m, or 3h, higher than zero) to wait until at least one pod is running
-      --shell='/bin/sh': Path to the shell command
-  -t, --tty=false: Force a pseudo-terminal to be allocated
-
-Use "oc options" for a list of global command-line options (applies to all commands).
+-c: Container name; defaults to first container
+--container='': Container name; defaults to first container
+-f: to use to rsh into the resource
+--filename=[]: to use to rsh into the resource
+-T: Disable pseudo-terminal allocation
+--no-tty=false: Disable pseudo-terminal allocation
+--pod-running-timeout=1m0s: The length of time (like 5s, 2m, or 3h, higher than zero) to wait until at least one pod is running
+--shell='/bin/sh': Path to the shell command
+-t: Force a pseudo-terminal to be allocated
+--tty=false: Force a pseudo-terminal to be allocated

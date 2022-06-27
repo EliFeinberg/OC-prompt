@@ -1,0 +1,26 @@
+{
+    "--show-console=false": {
+        "Text": "--show-console=false",
+        "Description": " If true, print the current server\"s web console URL"
+    },
+    "-c": {
+        "Text": "-c",
+        "Description": " Print the current user context name"
+    },
+    "--show-context=false": {
+        "Text": "--show-context=false",
+        "Description": " Print the current user context name"
+    },
+    "--show-server=false": {
+        "Text": "--show-server=false",
+        "Description": " If true, print the current server\"s REST API URL"
+    },
+    "-t": {
+        "Text": "-t",
+        "Description": " Print the token the current session is using. This will return an error if you are using a different form of authentication."
+    },
+    "--show-token=false": {
+        "Text": "--show-token=false",
+        "Description": " Print the token the current session is using. This will return an error if you are using a different form of authentication."
+    }
+}

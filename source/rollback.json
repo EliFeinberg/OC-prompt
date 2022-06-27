@@ -1,0 +1,46 @@
+{
+    "--allow-missing-template-keys=true": {
+        "Text": "--allow-missing-template-keys=true",
+        "Description": " If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats."
+    },
+    "--change-scaling-settings=false": {
+        "Text": "--change-scaling-settings=false",
+        "Description": " If true, include the previous deployment's replicationController replica count and selector in the rollback"
+    },
+    "--change-strategy=false": {
+        "Text": "--change-strategy=false",
+        "Description": " If true, include the previous deployment's strategy in the rollback"
+    },
+    "--change-triggers=false": {
+        "Text": "--change-triggers=false",
+        "Description": " If true, include the previous deployment's triggers in the rollback"
+    },
+    "-d": {
+        "Text": "-d",
+        "Description": " Instead of performing the rollback, describe what the rollback will look like in human-readable form"
+    },
+    "--dry-run=false": {
+        "Text": "--dry-run=false",
+        "Description": " Instead of performing the rollback, describe what the rollback will look like in human-readable form"
+    },
+    "-o": {
+        "Text": "-o",
+        "Description": " Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
+    },
+    "--output=''": {
+        "Text": "--output=''",
+        "Description": " Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
+    },
+    "--show-managed-fields=false": {
+        "Text": "--show-managed-fields=false",
+        "Description": " If true, keep the managedFields when printing objects in JSON or YAML format."
+    },
+    "--template=''": {
+        "Text": "--template=''",
+        "Description": " Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview]."
+    },
+    "--to-version=0": {
+        "Text": "--to-version=0",
+        "Description": " A config version to rollback to. Specifying version 0 is the same as omitting a version (the version will be auto-detected). This option is ignored when specifying a deployment."
+    }
+}
