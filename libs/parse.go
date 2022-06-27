@@ -40,7 +40,7 @@ func ParseFiletoSuggest(path string) []prompt.Suggest {
 
 func WriteHelp(str string, cmd string) {
 
-	f, _ := os.Create("source/Parse-Code/" + cmd + ".txt")
+	f, _ := os.Create("source/Parse-Code/"+ cmd + ".txt")
 
 	defer f.Close()
 

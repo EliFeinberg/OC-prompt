@@ -3,25 +3,41 @@
         "Text": "--allow-missing-template-keys=true",
         "Description": "If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats."
     },
-    "--field-manager='kubectl-edit'": {
-        "Text": "--field-manager='kubectl-edit'",
+    "--cascade='background'": {
+        "Text": "--cascade='background'",
+        "Description": "Must be 'background', 'orphan', or 'foreground'. Selects the deletion cascading strategy for the dependents (e.g. Pods created by a ReplicationController). Defaults to background."
+    },
+    "--dry-run='none'": {
+        "Text": "--dry-run='none'",
+        "Description": "Must be 'none', 'server', or 'client'. If client strategy, only print the object that would be sent, without sending it. If server strategy, submit server-side request without persisting the resource."
+    },
+    "--field-manager='kubectl-replace'": {
+        "Text": "--field-manager='kubectl-replace'",
         "Description": "Name of the manager used to track field ownership."
     },
     "-f": {
         "Text": "-f",
-        "Description": "Filename, directory, or URL to files to use to edit the resource"
+        "Description": "to use to replace the resource."
     },
     "--filename=[]": {
         "Text": "--filename=[]",
-        "Description": "Filename, directory, or URL to files to use to edit the resource"
+        "Description": "to use to replace the resource."
+    },
+    "--force=false": {
+        "Text": "--force=false",
+        "Description": "If true, immediately remove resources from API and bypass graceful deletion. Note that immediate deletion of some resources may result in inconsistency or data loss and requires confirmation."
+    },
+    "--grace-period=-1": {
+        "Text": "--grace-period=-1",
+        "Description": "Period of time in seconds given to the resource to terminate gracefully. Ignored if negative. Set to 1 for immediate shutdown. Can only be set to 0 when --force is true (force deletion)."
     },
     "-k": {
         "Text": "-k",
-        "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
+        "Description": "Process a kustomization directory. This flag can't be used together with -f or -R."
     },
     "--kustomize=''": {
         "Text": "--kustomize=''",
-        "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
+        "Description": "Process a kustomization directory. This flag can't be used together with -f or -R."
     },
     "-o": {
         "Text": "-o",
@@ -31,9 +47,9 @@
         "Text": "--output=''",
         "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
     },
-    "--output-patch=false": {
-        "Text": "--output-patch=false",
-        "Description": "Output the patch if the resource is edited."
+    "--raw=''": {
+        "Text": "--raw=''",
+        "Description": "Raw URI to PUT to the server.  Uses the transport specified by the kubeconfig file."
     },
     "-R": {
         "Text": "-R",
@@ -55,12 +71,16 @@
         "Text": "--template=''",
         "Description": "Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview]."
     },
+    "--timeout=0s": {
+        "Text": "--timeout=0s",
+        "Description": "The length of time to wait before giving up on a delete, zero means determine a timeout from the size of the object"
+    },
     "--validate=false": {
         "Text": "--validate=false",
         "Description": "If true, use a schema to validate the input before sending it"
     },
-    "--windows-line-endings=false": {
-        "Text": "--windows-line-endings=false",
-        "Description": "Defaults to the line ending native to your platform."
+    "--wait=false": {
+        "Text": "--wait=false",
+        "Description": "If true, wait for resources to be gone before returning. This waits for finalizers."
     }
 }

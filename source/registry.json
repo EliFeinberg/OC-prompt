@@ -1,0 +1,10 @@
+{
+    "info": {
+        "Text": "info",
+        "Description": "Print information about the integrated registry"
+    },
+    "login": {
+        "Text": "login",
+        "Description": "Log in to the integrated registry"
+    }
+}

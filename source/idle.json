@@ -1,30 +1,30 @@
 {
     "--all=false": {
         "Text": "--all=false",
-        "Description": " if true, select all services in the namespace"
+        "Description": "if true, select all services in the namespace"
     },
     "-A": {
         "Text": "-A",
-        "Description": " if true, select services across all namespaces"
+        "Description": "if true, select services across all namespaces"
     },
     "--all-namespaces=false": {
         "Text": "--all-namespaces=false",
-        "Description": " if true, select services across all namespaces"
+        "Description": "if true, select services across all namespaces"
     },
     "--dry-run=false": {
         "Text": "--dry-run=false",
-        "Description": " If true, only print the annotations that would be written, without annotating or idling the relevant objects"
+        "Description": "If true, only print the annotations that would be written, without annotating or idling the relevant objects"
     },
     "--resource-names-file=''": {
         "Text": "--resource-names-file=''",
-        "Description": " file containing list of services whose scalable resources to idle"
+        "Description": "file containing list of services whose scalable resources to idle"
     },
     "-l": {
         "Text": "-l",
-        "Description": " Selector (label query) to use to select services"
+        "Description": "Selector (label query) to use to select services"
     },
     "--selector=''": {
         "Text": "--selector=''",
-        "Description": " Selector (label query) to use to select services"
+        "Description": "Selector (label query) to use to select services"
     }
 }

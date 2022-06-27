@@ -1,0 +1,106 @@
+{
+    "--allow-missing-template-keys=true": {
+        "Text": "--allow-missing-template-keys=true",
+        "Description": "If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats."
+    },
+    "--build-arg=[]": {
+        "Text": "--build-arg=[]",
+        "Description": "Specify a key-value pair to pass to Docker during the build."
+    },
+    "--build-loglevel=''": {
+        "Text": "--build-loglevel=''",
+        "Description": "Specify the log level for the build log output"
+    },
+    "--commit=''": {
+        "Text": "--commit=''",
+        "Description": "Specify the source code commit identifier the build should use; requires a build based on a Git repository"
+    },
+    "-e": {
+        "Text": "-e",
+        "Description": "Specify a key-value pair for an environment variable to set for the build container."
+    },
+    "--env=[]": {
+        "Text": "--env=[]",
+        "Description": "Specify a key-value pair for an environment variable to set for the build container."
+    },
+    "--exclude='(^|/)\\.git(/|$)'": {
+        "Text": "--exclude='(^|/)\\.git(/|$)'",
+        "Description": "When using the --from-dir option: regular expression for selecting files from the source tree to exclude from the build; the default excludes the '.git' directory (see https://golang.org/pkg/regexp for syntax, but note that '' will be interpreted as allow all files and exclude no files)"
+    },
+    "-F": {
+        "Text": "-F",
+        "Description": "Start a build and watch its logs until it completes or fails"
+    },
+    "--follow=false": {
+        "Text": "--follow=false",
+        "Description": "Start a build and watch its logs until it completes or fails"
+    },
+    "--from-archive=''": {
+        "Text": "--from-archive=''",
+        "Description": "An archive (tar, tar.gz, zip) to be extracted before the build and used as the binary input."
+    },
+    "--from-build=''": {
+        "Text": "--from-build=''",
+        "Description": "Specify the name of a build which should be re-run"
+    },
+    "--from-dir=''": {
+        "Text": "--from-dir=''",
+        "Description": "A directory to archive and use as the binary input for a build."
+    },
+    "--from-file=''": {
+        "Text": "--from-file=''",
+        "Description": "A file to use as the binary input for the build; example a pom.xml or Dockerfile. Will be the only file in the build source."
+    },
+    "--from-repo=''": {
+        "Text": "--from-repo=''",
+        "Description": "The path to a local source code repository to use as the binary input for a build."
+    },
+    "--from-webhook=''": {
+        "Text": "--from-webhook=''",
+        "Description": "Specify a generic webhook URL for an existing build config to trigger"
+    },
+    "--git-post-receive=''": {
+        "Text": "--git-post-receive=''",
+        "Description": "The contents of the post-receive hook to trigger a build"
+    },
+    "--git-repository=''": {
+        "Text": "--git-repository=''",
+        "Description": "The path to the git repository for post-receive; defaults to the current directory"
+    },
+    "--incremental=false": {
+        "Text": "--incremental=false",
+        "Description": "Overrides the incremental setting in a source-strategy build, ignored if not specified"
+    },
+    "--list-webhooks=''": {
+        "Text": "--list-webhooks=''",
+        "Description": "List the webhooks for the specified build config or build; accepts 'all', 'generic', or 'github'"
+    },
+    "--no-cache=false": {
+        "Text": "--no-cache=false",
+        "Description": "Overrides the noCache setting in a docker-strategy build, ignored if not specified"
+    },
+    "-o": {
+        "Text": "-o",
+        "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
+    },
+    "--output=''": {
+        "Text": "--output=''",
+        "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
+    },
+    "--show-managed-fields=false": {
+        "Text": "--show-managed-fields=false",
+        "Description": "If true, keep the managedFields when printing objects in JSON or YAML format."
+    },
+    "--template=''": {
+        "Text": "--template=''",
+        "Description": "Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview]."
+    },
+    "-w": {
+        "Text": "-w",
+        "Description": "Wait for a build to complete and exit with a non-zero return code if the build fails"
+    },
+    "--wait=false": {
+        "Text": "--wait=false",
+        "Description": "Wait for a build to complete and exit with a non-zero return code if the build fails"
+    }
+}

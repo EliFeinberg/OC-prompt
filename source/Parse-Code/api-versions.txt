@@ -7,4 +7,4 @@ Examples:
   # Print the supported API versions
   oc api-versions
 
-Use "oc options" for a list of global command-line options (applies to all commands).
+Use "oc options"for a list of global command-line options (applies to all commands).

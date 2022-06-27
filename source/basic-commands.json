@@ -109,7 +109,7 @@
     },
     "serviceaccounts": {
         "Text": "serviceaccounts",
-        "Description": " Manage service accounts in your project"
+        "Description": "Manage service accounts in your project"
     },
     "logs": {
         "Text": "logs",

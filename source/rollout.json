@@ -1,0 +1,38 @@
+{
+    "cancel": {
+        "Text": "cancel",
+        "Description": "Cancel the in-progress deployment"
+    },
+    "history": {
+        "Text": "history",
+        "Description": "View rollout history"
+    },
+    "latest": {
+        "Text": "latest",
+        "Description": "Start a new rollout for a deployment config with the latest state from its triggers"
+    },
+    "pause": {
+        "Text": "pause",
+        "Description": "Mark the provided resource as paused"
+    },
+    "restart": {
+        "Text": "restart",
+        "Description": "Restart a resource"
+    },
+    "resume": {
+        "Text": "resume",
+        "Description": "Resume a paused resource"
+    },
+    "retry": {
+        "Text": "retry",
+        "Description": "Retry the latest failed rollout"
+    },
+    "status": {
+        "Text": "status",
+        "Description": "Show the status of the rollout"
+    },
+    "undo": {
+        "Text": "undo",
+        "Description": "Undo a previous rollout"
+    }
+}

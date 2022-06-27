@@ -1,23 +1,27 @@
 {
+    "--all=false": {
+        "Text": "--all=false",
+        "Description": "Select all resources in the namespace of the specified resource types"
+    },
     "--allow-missing-template-keys=true": {
         "Text": "--allow-missing-template-keys=true",
         "Description": "If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats."
+    },
+    "--current-replicas=-1": {
+        "Text": "--current-replicas=-1",
+        "Description": "Precondition for current size. Requires that the current size of the resource match this value in order to scale. -1 (default) for no condition."
     },
     "--dry-run='none'": {
         "Text": "--dry-run='none'",
         "Description": "Must be 'none', 'server', or 'client'. If client strategy, only print the object that would be sent, without sending it. If server strategy, submit server-side request without persisting the resource."
     },
-    "--field-manager='kubectl-patch'": {
-        "Text": "--field-manager='kubectl-patch'",
-        "Description": "Name of the manager used to track field ownership."
-    },
     "-f": {
         "Text": "-f",
-        "Description": "Filename, directory, or URL to files identifying the resource to update"
+        "Description": "Filename, directory, or URL to files identifying the resource to set a new size"
     },
     "--filename=[]": {
         "Text": "--filename=[]",
-        "Description": "Filename, directory, or URL to files identifying the resource to update"
+        "Description": "Filename, directory, or URL to files identifying the resource to set a new size"
     },
     "-k": {
         "Text": "-k",
@@ -27,10 +31,6 @@
         "Text": "--kustomize=''",
         "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
     },
-    "--local=false": {
-        "Text": "--local=false",
-        "Description": "If true, patch will operate on the content of the file, not the server-side resource."
-    },
     "-o": {
         "Text": "-o",
         "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
@@ -38,18 +38,6 @@
     "--output=''": {
         "Text": "--output=''",
         "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
-    },
-    "-p": {
-        "Text": "-p",
-        "Description": "The patch to be applied to the resource JSON file."
-    },
-    "--patch=''": {
-        "Text": "--patch=''",
-        "Description": "The patch to be applied to the resource JSON file."
-    },
-    "--patch-file=''": {
-        "Text": "--patch-file=''",
-        "Description": "A file containing a patch to be applied to the resource."
     },
     "-R": {
         "Text": "-R",
@@ -59,16 +47,32 @@
         "Text": "--recursive=false",
         "Description": "Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
     },
+    "--replicas=0": {
+        "Text": "--replicas=0",
+        "Description": "The new desired number of replicas. Required."
+    },
+    "--resource-version=''": {
+        "Text": "--resource-version=''",
+        "Description": "Precondition for resource version. Requires that the current resource version match this value in order to scale."
+    },
+    "-l": {
+        "Text": "-l",
+        "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+    },
+    "--selector=''": {
+        "Text": "--selector=''",
+        "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+    },
     "--show-managed-fields=false": {
         "Text": "--show-managed-fields=false",
         "Description": "If true, keep the managedFields when printing objects in JSON or YAML format."
     },
     "--template=''": {
         "Text": "--template=''",
-        "Description": "Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http//golang.org/pkg/text/template/#pkg-overview]."
+        "Description": "Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview]."
     },
-    "--type='strategic'": {
-        "Text": "--type='strategic'",
-        "Description": "The type of patch being provided; one of [json merge strategic]"
+    "--timeout=0s": {
+        "Text": "--timeout=0s",
+        "Description": "The length of time to wait before giving up on a scale operation, zero means don't wait. Any other values should contain a corresponding time unit (e.g. 1s, 2m, 3h)."
     }
 }

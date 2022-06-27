@@ -17,7 +17,7 @@ var GlobalFlags = false
 var prune = true
 
 func completer(d prompt.Document) []prompt.Suggest {
-	CMDargs := strings.Split(d.Text, " ")
+	CMDargs := strings.Split(d.Text, "")
 	var s []prompt.Suggest
 
 	if libs.StringInList(CMDargs[0], OC_COMMANDS) {
@@ -67,7 +67,7 @@ func main() {
 			completer,
 			prompt.OptionTitle("RHOCP CLI"),
 			prompt.OptionSelectedDescriptionTextColor(prompt.DarkGray))
-		CMDargs := strings.Split(t, " ")
+		CMDargs := strings.Split(t, "")
 		if CMDargs[0] == "exit" {
 			os.Exit(0)
 		}

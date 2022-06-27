@@ -5,10 +5,10 @@ const result = {};
 const keys = ["\"Text\"", "\"Description\""];
 
 // Read data
-const readStream = fs.createReadStream("proxy.txt");
+const readStream = fs.createReadStream("whoami.txt");
 
 // Parser
-const parser = csv.parse({ delimiter: ":" });
+const parser = csv.parse({ delimiter: ":"});
 
 
 parser.on("data", (chunk) => {
@@ -27,22 +27,11 @@ parser.on("end", () => {
     console.log(result);
 });
 
-// const json = JSON.stringify(result);
-// fs.writeFile('test.json', json, 'utf8')
-
-// fs.writeFile('api-resources.json', console.log(result), err => {
-//     if (err) {
-//       console.error(err)
-//       return
-//     }
-//     //file written successfully
-//   })
-
 readStream.pipe(parser);
 
 // 1.run "curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh -o install_nvm.sh"
 // 2.run "bash install_nvm.sh"
 // 3. copy end script and run
 // 4. go to file and run "node parser.js"
-// 5. turn all '" to " and turn all "' to "
+// 5. turn all '"to "and turn all "' to "
 // 6. turn all ' to "

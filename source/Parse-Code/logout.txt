@@ -13,4 +13,4 @@ Examples:
   # Log out
   oc logout
 
-Use "oc options" for a list of global command-line options (applies to all commands).
+Use "oc options"for a list of global command-line options (applies to all commands).

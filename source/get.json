@@ -1,122 +1,122 @@
 {
     "-A": {
         "Text": "-A",
-        "Description": " If present, list the requested object(s) across all namespaces. Namespace in current context is ignored even if specified with --namespace."
+        "Description": "If present, list the requested object(s) across all namespaces. Namespace in current context is ignored even if specified with --namespace."
     },
     "--all-namespaces=false": {
         "Text": "--all-namespaces=false",
-        "Description": " If present, list the requested object(s) across all namespaces. Namespace in current context is ignored even if specified with --namespace."
+        "Description": "If present, list the requested object(s) across all namespaces. Namespace in current context is ignored even if specified with --namespace."
     },
     "--allow-missing-template-keys=true": {
         "Text": "--allow-missing-template-keys=true",
-        "Description": " If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats."
+        "Description": "If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats."
     },
     "--chunk-size=500": {
         "Text": "--chunk-size=500",
-        "Description": " Return large lists in chunks rather than all at once. Pass 0 to disable. This flag is beta and may change in the future."
+        "Description": "Return large lists in chunks rather than all at once. Pass 0 to disable. This flag is beta and may change in the future."
     },
     "--field-selector=''": {
         "Text": "--field-selector=''",
-        "Description": " Selector (field query) to filter on, supports '=', '==', and '!='.(e.g. --field-selector key1=value1,key2=value2). The server only supports a limited number of field queries per type."
+        "Description": "Selector (field query) to filter on, supports '=', '==', and '!='.(e.g. --field-selector key1=value1,key2=value2). The server only supports a limited number of field queries per type."
     },
     "-f": {
         "Text": "-f",
-        "Description": " Filename, directory, or URL to files identifying the resource to get from a server."
+        "Description": "Filename, directory, or URL to files identifying the resource to get from a server."
     },
     "--filename=[]": {
         "Text": "--filename=[]",
-        "Description": " Filename, directory, or URL to files identifying the resource to get from a server."
+        "Description": "Filename, directory, or URL to files identifying the resource to get from a server."
     },
     "--ignore-not-found=false": {
         "Text": "--ignore-not-found=false",
-        "Description": " If the requested object does not exist the command will return exit code 0."
+        "Description": "If the requested object does not exist the command will return exit code 0."
     },
     "-k": {
         "Text": "-k",
-        "Description": " Process the kustomization directory. This flag can't be used together with -f or -R."
+        "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
     },
     "--kustomize=''": {
         "Text": "--kustomize=''",
-        "Description": " Process the kustomization directory. This flag can't be used together with -f or -R."
+        "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
     },
     "-L": {
         "Text": "-L",
-        "Description": " Accepts a comma separated list of labels that are going to be presented as columns. Names are case-sensitive. You can also use multiple flag options like -L label1 -L label2..."
+        "Description": "Accepts a comma separated list of labels that are going to be presented as columns. Names are case-sensitive. You can also use multiple flag options like -L label1 -L label2..."
     },
     "--label-columns=[]": {
         "Text": "--label-columns=[]",
-        "Description": " Accepts a comma separated list of labels that are going to be presented as columns. Names are case-sensitive. You can also use multiple flag options like -L label1 -L label2..."
+        "Description": "Accepts a comma separated list of labels that are going to be presented as columns. Names are case-sensitive. You can also use multiple flag options like -L label1 -L label2..."
     },
     "--no-headers=false": {
         "Text": "--no-headers=false",
-        "Description": " When using the default or custom-column output format, don't print headers (default print headers)."
+        "Description": "When using the default or custom-column output format, don't print headers (default print headers)."
     },
     "-o": {
         "Text": "-o",
-        "Description": " Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file|custom-columns-file|custom-columns|wide See custom columns [http:s//kubernetes.io/docs/reference/kubectl/overview/#custom-columns], golang template [http://golang.org/pkg/text/template/#pkg-overview] and jsonpath template [http:s//kubernetes.io/docs/reference/kubectl/jsonpath/]."
+        "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file|custom-columns-file|custom-columns|wide See custom columns [http:s//kubernetes.io/docs/reference/kubectl/overview/#custom-columns], golang template [http://golang.org/pkg/text/template/#pkg-overview] and jsonpath template [http:s//kubernetes.io/docs/reference/kubectl/jsonpath/]."
     },
     "--output=''": {
         "Text": "--output=''",
-        "Description": " Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file|custom-columns-file|custom-columns|wide See custom columns [http:s//kubernetes.io/docs/reference/kubectl/overview/#custom-columns], golang template [http://golang.org/pkg/text/template/#pkg-overview] and jsonpath template [http:s//kubernetes.io/docs/reference/kubectl/jsonpath/]."
+        "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file|custom-columns-file|custom-columns|wide See custom columns [http:s//kubernetes.io/docs/reference/kubectl/overview/#custom-columns], golang template [http://golang.org/pkg/text/template/#pkg-overview] and jsonpath template [http:s//kubernetes.io/docs/reference/kubectl/jsonpath/]."
     },
     "--output-watch-events=false": {
         "Text": "--output-watch-events=false",
-        "Description": " Output watch event objects when --watch or --watch-only is used. Existing objects are output as initial ADDED events."
+        "Description": "Output watch event objects when --watch or --watch-only is used. Existing objects are output as initial ADDED events."
     },
     "--raw=''": {
         "Text": "--raw=''",
-        "Description": " Raw URI to request from the server.  Uses the transport specified by the kubeconfig file."
+        "Description": "Raw URI to request from the server.  Uses the transport specified by the kubeconfig file."
     },
     "-R": {
         "Text": "-R",
-        "Description": " Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
+        "Description": "Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
     },
     "--recursive=false": {
         "Text": "--recursive=false",
-        "Description": " Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
+        "Description": "Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
     },
     "-l": {
         "Text": "-l",
-        "Description": " Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+        "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
     },
     "--selector=''": {
         "Text": "--selector=''",
-        "Description": " Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+        "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
     },
     "--server-print=true": {
         "Text": "--server-print=true",
-        "Description": " If true, have the server return the appropriate table output. Supports extension APIs and CRDs."
+        "Description": "If true, have the server return the appropriate table output. Supports extension APIs and CRDs."
     },
     "--show-kind=false": {
         "Text": "--show-kind=false",
-        "Description": " If present, list the resource type for the requested object(s)."
+        "Description": "If present, list the resource type for the requested object(s)."
     },
     "--show-labels=false": {
         "Text": "--show-labels=false",
-        "Description": " When printing, show all labels as the last column (default hide labels column)"
+        "Description": "When printing, show all labels as the last column (default hide labels column)"
     },
     "--show-managed-fields=false": {
         "Text": "--show-managed-fields=false",
-        "Description": " If true, keep the managedFields when printing objects in JSON or YAML format."
+        "Description": "If true, keep the managedFields when printing objects in JSON or YAML format."
     },
     "--sort-by=''": {
         "Text": "--sort-by=''",
-        "Description": " If non-empty, sort list types using this field specification.  The field specification is expressed as a JSONPath expression (e.g. '{.metadata.name}'). The field in the API resource specified by this JSONPath expression must be an integer or a string."
+        "Description": "If non-empty, sort list types using this field specification.  The field specification is expressed as a JSONPath expression (e.g. '{.metadata.name}'). The field in the API resource specified by this JSONPath expression must be an integer or a string."
     },
     "--template=''": {
         "Text": "--template=''",
-        "Description": " Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview]."
+        "Description": "Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview]."
     },
     "-w": {
         "Text": "-w",
-        "Description": " After listing/getting the requested object, watch for changes."
+        "Description": "After listing/getting the requested object, watch for changes."
     },
     "--watch=false": {
         "Text": "--watch=false",
-        "Description": " After listing/getting the requested object, watch for changes."
+        "Description": "After listing/getting the requested object, watch for changes."
     },
     "--watch-only=false": {
         "Text": "--watch-only=false",
-        "Description": " Watch for changes to the requested object(s), without listing/getting first."
+        "Description": "Watch for changes to the requested object(s), without listing/getting first."
     }
 }

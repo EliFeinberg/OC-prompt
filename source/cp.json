@@ -1,18 +1,18 @@
 {
   "-c": {
     "Text": "-c",
-    "Description": " Container name. If omitted, use the kubectl.kubernetes.io/default-container annotation for selecting the container to be attached or the first container in the pod will be chosen"
+    "Description": "Container name. If omitted, use the kubectl.kubernetes.io/default-container annotation for selecting the container to be attached or the first container in the pod will be chosen"
   },
   "--container=''": {
     "Text": "--container=''",
-    "Description": " Container name. If omitted, use the kubectl.kubernetes.io/default-container annotation for selecting the container to be attached or the first container in the pod will be chosen"
+    "Description": "Container name. If omitted, use the kubectl.kubernetes.io/default-container annotation for selecting the container to be attached or the first container in the pod will be chosen"
   },
   "--no-preserve=false": {
     "Text": "--no-preserve=false",
-    "Description": " The copied file/directory's ownership and permissions will not be preserved in the container"
+    "Description": "The copied file/directory's ownership and permissions will not be preserved in the container"
   },
   "--retries=0": {
     "Text": "--retries=0",
-    "Description": " Set number of retries to complete a copy operation from a container. Specify 0 to disable or any negative value for infinite retrying. The default is 0 (no retry)."
+    "Description": "Set number of retries to complete a copy operation from a container. Specify 0 to disable or any negative value for infinite retrying. The default is 0 (no retry)."
   }
 }
