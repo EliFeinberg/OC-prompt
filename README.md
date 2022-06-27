@@ -2,7 +2,7 @@
 Interactive CLI tool for OpenShift. Includes autocomplete for valid functions and flags for each function.
 
 ## Phase 1 
-- [ ] Compile a list of all the flags from command arguments
+- [x] Compile a list of all the flags from command arguments
 - [x] Compile a list of all the openshift command arguments
 - [x] Decide on how to access/store commands/flags
 - [x] Parse file for commands/flags 
@@ -25,6 +25,10 @@ Built on: <br />
         Client Version: 4.10.18 <br />
         Server Version: 4.9.33 <br />
         Kubernetes Version: v1.22.8+c02bd9d <br />
+        Go Version: go1.18.3 darwin/amd64 <br />
+<br />
+Libraries Used: <br />
+        github.com/c-bata/go-prompt
 
 # Contributors
 Architeture - Eli Feinberg <br />

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"go-prompt/libs"
 	"os"
@@ -15,15 +16,21 @@ var OC_COMMANDS []string
 var GLOBAL_OP []prompt.Suggest
 var GlobalFlags = false
 var prune = true
+var helpOp = true
+var stderr bytes.Buffer
 
 func completer(d prompt.Document) []prompt.Suggest {
-	CMDargs := strings.Split(d.Text, "")
+	CMDargs := strings.Split(d.Text, " ")
 	var s []prompt.Suggest
 
 	if libs.StringInList(CMDargs[0], OC_COMMANDS) {
 		if CMDargs[0] == "api-versions" {
 			return []prompt.Suggest{}
 		} else if CMDargs[0] == "exit" {
+			return []prompt.Suggest{}
+		} else if CMDargs[0] == "ex" {
+			return []prompt.Suggest{}
+		} else if CMDargs[0] == "logout" {
 			return []prompt.Suggest{}
 		} else {
 			s = libs.ParseFiletoSuggest("source/" + CMDargs[0] + ".json")
@@ -38,6 +45,9 @@ func completer(d prompt.Document) []prompt.Suggest {
 
 	} else {
 		s = OC_COMMANDS_SUGGEST
+	}
+	if helpOp {
+		s = append(s, prompt.Suggest{Text: "--help", Description: "for more information about a given command"})
 	}
 
 	return prompt.FilterHasPrefix(s, d.GetWordBeforeCursor(), true)
@@ -67,7 +77,7 @@ func main() {
 			completer,
 			prompt.OptionTitle("RHOCP CLI"),
 			prompt.OptionSelectedDescriptionTextColor(prompt.DarkGray))
-		CMDargs := strings.Split(t, "")
+		CMDargs := strings.Split(t, " ")
 		if CMDargs[0] == "exit" {
 			os.Exit(0)
 		}
@@ -77,11 +87,12 @@ func main() {
 			ps = exec.Command("oc", CMDargs...)
 			// fmt.Println(CMDargs)
 		}
-
+		ps.Stderr = &stderr
 		res, err := ps.Output()
 
 		if err != nil {
-			fmt.Println(err)
+			fmt.Println(stderr.String())
+			stderr.Reset()
 		} else {
 			fmt.Println(string(res))
 		}
