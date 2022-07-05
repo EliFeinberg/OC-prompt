@@ -11,7 +11,6 @@ Interactive CLI tool for OpenShift. Includes autocomplete for valid functions an
 - [ ] Implement Usage instruction for each Openshift Command
 - [ ] Pull Recommended local files Into AutoComplete
 - [ ] Pull Recommended Ports Into Autocomplete
-- [ ] login with ENV Vars
 
 ## Phase 3
 - [ ] Create Tool to speed up adding new commands/flag
@@ -20,12 +19,15 @@ Interactive CLI tool for OpenShift. Includes autocomplete for valid functions an
 - [ ] Pull Local Images Into Autocomplete
 - [ ] Implement History
 
+## Optional Features
+- [ ] login with ENV Vars
+
 # Testing
 Built on: <br />
-        Client Version: 4.10.18 <br />
-        Server Version: 4.9.33 <br />
-        Kubernetes Version: v1.22.8+c02bd9d <br />
-        Go Version: go1.18.3 darwin/amd64 <br />
+            Client Version: 4.10.18 <br />
+            Server Version: 4.9.33 <br />
+            Kubernetes Version: v1.22.8+c02bd9d <br />
+            Go Version: go1.18.3 darwin/amd64 <br />
 <br />
 Libraries Used: <br />
         github.com/c-bata/go-prompt
