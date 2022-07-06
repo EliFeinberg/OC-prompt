@@ -1,6 +1,16 @@
 # OC-prompt
 Interactive CLI tool for OpenShift. Includes autocomplete for valid functions and flags for each function.
 
+# Installation 
+
+1. Install [Golang](https://go.dev/doc/install) and [Openshift-CLI](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html)
+2. Clone this repository 
+3. Run the following command
+   
+            go run main.go
+
+----------------
+
 ## Phase 1 
 - [x] Compile a list of all the flags from command arguments
 - [x] Compile a list of all the openshift command arguments
