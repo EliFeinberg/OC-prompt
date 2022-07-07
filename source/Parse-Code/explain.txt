@@ -1,2 +1,0 @@
---api-version='': Get different explanations for particular API version (API group/version)
---recursive=false: Print the fields of fields (Currently only 1 level deep)

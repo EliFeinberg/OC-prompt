@@ -1,2 +1,0 @@
-info:Print information about the integrated registry
-login:Log in to the integrated registry

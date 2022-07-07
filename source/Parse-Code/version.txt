@@ -1,3 +1,0 @@
---client=false: Client version only (no server required).
--o: One of 'yaml' or 'json'.
---output='': One of 'yaml' or 'json'.

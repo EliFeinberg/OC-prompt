@@ -1,5 +1,0 @@
--A: If true, display status for all namespaces (must have cluster admin)
---all-namespaces=false: If true, display status for all namespaces (must have cluster admin)
--o: Output format. One of dot.
---output='': Output format. One of dot.
---suggest=false: See details for resolving issues.

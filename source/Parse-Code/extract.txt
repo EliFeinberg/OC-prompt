@@ -1,5 +1,0 @@
---confirm=false: If true, overwrite files that already exist.
--f: Filename, directory, or URL to file to identify to extract the resource.
---filename=[]: Filename, directory, or URL to file to identify to extract the resource.
---keys=[]: An optional list of keys to extract (default is all keys).
---to='.': Directory to extract files to.

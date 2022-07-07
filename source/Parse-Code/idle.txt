@@ -1,7 +1,0 @@
---all=false: if true, select all services in the namespace
--A: if true, select services across all namespaces
---all-namespaces=false: if true, select services across all namespaces
---dry-run=false: If true, only print the annotations that would be written, without annotating or idling the relevant objects
---resource-names-file='': file containing list of services whose scalable resources to idle
--l: Selector (label query) to use to select services
---selector='': Selector (label query) to use to select services

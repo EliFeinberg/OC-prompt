@@ -1,5 +1,0 @@
-info:Display information about an image
-mirror:Mirror images from one repository to another
-serve:Serve a container registry from images mirrored to disk
-append:Add layers to images and push them to a registry
-extract:Copy files from an image to the file system

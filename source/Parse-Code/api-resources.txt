@@ -1,8 +1,0 @@
---api-group='': Limit to resources in the specified API group.
---cached=false: Use the cached list of resources if available.
---namespaced=true: If false, non-namespaced resources will be returned, otherwise returning namespaced resources by default.
---no-headers=false: When using the default or custom-column output format, don't print headers (default print headers).
--o: Output format. One of wide|name.
---output='': Output format. One of wide|name.
---sort-by='': If non-empty, sort list of resources using specified field. The field can be either 'name' or 'kind'.
---verbs=[]: Limit to resources that support the specified verbs.

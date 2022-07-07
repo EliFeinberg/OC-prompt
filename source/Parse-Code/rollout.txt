@@ -1,9 +1,0 @@
-cancel:Cancel the in-progress deployment
-history:View rollout history
-latest:Start a new rollout for a deployment config with the latest state from its triggers
-pause:Mark the provided resource as paused
-restart:Restart a resource
-resume:Resume a paused resource
-retry:Retry the latest failed rollout
-status:Show the status of the rollout
-undo:Undo a previous rollout

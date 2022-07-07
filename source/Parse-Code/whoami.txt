@@ -1,6 +1,0 @@
---show-console=false: If true, print the current server's web console URL
--c: Print the current user context name
---show-context=false: Print the current user context name
---show-server=false: If true, print the current server's REST API URL
--t: Print the token the current session is using. This will return an error if you are using a different form of authentication.
---show-token=false: Print the token the current session is using. This will return an error if you are using a different form of authentication.

@@ -1,3 +1,0 @@
---description='': Project description
---display-name='': Project display name
---skip-config-write=false: If true, the project will not be set as a cluster entry in kubeconfig after being created
