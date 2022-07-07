@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"go-prompt/libs"
+	"go-prompt/resources"
 	"os"
 	"os/exec"
 	"strings"
@@ -33,7 +34,7 @@ func completer(d prompt.Document) []prompt.Suggest {
 		} else if CMDargs[0] == "logout" {
 			return []prompt.Suggest{}
 		} else {
-			s = libs.ParseFiletoSuggest("source/" + CMDargs[0] + ".json")
+			s = resources.CommandFlags()[CMDargs[0]]
 		}
 		// Extra Settings for Customization
 		if GlobalFlags {
@@ -65,9 +66,9 @@ func pruneUsedArgs(CMDargs []string, s *[]prompt.Suggest) {
 	}
 }
 func main() {
-	OC_COMMANDS = libs.ParseFileForCommandList("source/commands.json")
-	OC_COMMANDS_SUGGEST = libs.ParseFiletoSuggest("source/commands.json")
-	GLOBAL_OP = libs.ParseFiletoSuggest("source/GlobalOp.json")
+	OC_COMMANDS = resources.CommandList()
+	OC_COMMANDS_SUGGEST = resources.Commands()
+	GLOBAL_OP = resources.GlobalOps()
 	var ps *exec.Cmd
 
 	fmt.Println("OpenShift Interactive Command Line Interface")
