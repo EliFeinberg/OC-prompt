@@ -7,8 +7,13 @@ Interactive CLI tool for OpenShift. Includes autocomplete for valid functions an
 2. Clone this repository 
 3. Run the following command
    
-            go run main.go
+            go build -o oc-prompt main.go
+4. Copy file into local executables
+   
+            cp oc-prompt /usr/local/bin/
+5. To execute run
 
+            oc-prompt
 ----------------
 
 ## Phase 1 
