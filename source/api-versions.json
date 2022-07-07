@@ -1,0 +1,4 @@
+{
+    "Usage": "oc api-versions [flags]",
+    "Arguments": {}
+}

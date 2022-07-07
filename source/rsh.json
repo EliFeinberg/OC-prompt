@@ -1,42 +1,45 @@
 {
-    "-c": {
-        "Text": "-c",
-        "Description": "Container name; defaults to first container"
-    },
-    "--container=''": {
-        "Text": "--container=''",
-        "Description": "Container name; defaults to first container"
-    },
-    "-f": {
-        "Text": "-f",
-        "Description": "to use to rsh into the resource"
-    },
-    "--filename=[]": {
-        "Text": "--filename=[]",
-        "Description": "to use to rsh into the resource"
-    },
-    "-T": {
-        "Text": "-T",
-        "Description": "Disable pseudo-terminal allocation"
-    },
-    "--no-tty=false": {
-        "Text": "--no-tty=false",
-        "Description": "Disable pseudo-terminal allocation"
-    },
-    "--pod-running-timeout=1m0s": {
-        "Text": "--pod-running-timeout=1m0s",
-        "Description": "The length of time (like 5s, 2m, or 3h, higher than zero) to wait until at least one pod is running"
-    },
-    "--shell='/bin/sh'": {
-        "Text": "--shell='/bin/sh'",
-        "Description": "Path to the shell command"
-    },
-    "-t": {
-        "Text": "-t",
-        "Description": "Force a pseudo-terminal to be allocated"
-    },
-    "--tty=false": {
-        "Text": "--tty=false",
-        "Description": "Force a pseudo-terminal to be allocated"
+    "Usage": "oc rsh [-c CONTAINER] [flags] (POD | TYPE/NAME) COMMAND [args...]]",
+    "Arguments": {
+        "-c": {
+            "Text": "-c",
+            "Description": "Container name; defaults to first container"
+        },
+        "--container=''": {
+            "Text": "--container=''",
+            "Description": "Container name; defaults to first container"
+        },
+        "-f": {
+            "Text": "-f",
+            "Description": "to use to rsh into the resource"
+        },
+        "--filename=[]": {
+            "Text": "--filename=[]",
+            "Description": "to use to rsh into the resource"
+        },
+        "-T": {
+            "Text": "-T",
+            "Description": "Disable pseudo-terminal allocation"
+        },
+        "--no-tty=false": {
+            "Text": "--no-tty=false",
+            "Description": "Disable pseudo-terminal allocation"
+        },
+        "--pod-running-timeout=1m0s": {
+            "Text": "--pod-running-timeout=1m0s",
+            "Description": "The length of time (like 5s, 2m, or 3h, higher than zero) to wait until at least one pod is running"
+        },
+        "--shell='/bin/sh'": {
+            "Text": "--shell='/bin/sh'",
+            "Description": "Path to the shell command"
+        },
+        "-t": {
+            "Text": "-t",
+            "Description": "Force a pseudo-terminal to be allocated"
+        },
+        "--tty=false": {
+            "Text": "--tty=false",
+            "Description": "Force a pseudo-terminal to be allocated"
+        }
     }
 }

@@ -1,10 +1,13 @@
 {
-    "info": {
-        "Text": "info",
-        "Description": "Print information about the integrated registry"
-    },
-    "login": {
-        "Text": "login",
-        "Description": "Log in to the integrated registry"
+    "Usage": "oc registry COMMAND [flags]",
+    "Arguments": {
+        "info": {
+            "Text": "info",
+            "Description": "Print information about the integrated registry"
+        },
+        "login": {
+            "Text": "login",
+            "Description": "Log in to the integrated registry"
+        }
     }
 }

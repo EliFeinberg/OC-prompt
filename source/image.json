@@ -1,22 +1,25 @@
 {
-    "info": {
-        "Text": "info",
-        "Description": "Display information about an image"
-    },
-    "mirror": {
-        "Text": "mirror",
-        "Description": "Mirror images from one repository to another"
-    },
-    "serve": {
-        "Text": "serve",
-        "Description": "Serve a container registry from images mirrored to disk"
-    },
-    "append": {
-        "Text": "append",
-        "Description": "Add layers to images and push them to a registry"
-    },
-    "extract": {
-        "Text": "extract",
-        "Description": "Copy files from an image to the file system"
+    "Usage": "oc image COMMAND [flags]",
+    "Arguments": {
+        "info": {
+            "Text": "info",
+            "Description": "Display information about an image"
+        },
+        "mirror": {
+            "Text": "mirror",
+            "Description": "Mirror images from one repository to another"
+        },
+        "serve": {
+            "Text": "serve",
+            "Description": "Serve a container registry from images mirrored to disk"
+        },
+        "append": {
+            "Text": "append",
+            "Description": "Add layers to images and push them to a registry"
+        },
+        "extract": {
+            "Text": "extract",
+            "Description": "Copy files from an image to the file system"
+        }
     }
 }

@@ -1,6 +1,9 @@
 {
-    "dump": {
-        "Text": "dump",
-        "Description": "Dump relevant information for debugging and diagnosis"
+    "Usage": "oc cluster-info [flags]",
+    "Arguments": {
+        "dump": {
+            "Text": "dump",
+            "Description": "Dump relevant information for debugging and diagnosis"
+        }
     }
 }
