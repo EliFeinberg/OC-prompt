@@ -1,62 +1,65 @@
 {
-    "deployment-hook": {
-        "Text": "deployment-hook",
-        "Description": "Update a deployment hook on a deployment config"
-    },
-    "env": {
-        "Text": "env",
-        "Description": "Update environment variables on a pod template"
-    },
-    "image": {
-        "Text": "image",
-        "Description": "Update the image of a pod template"
-    },
-    "probe": {
-        "Text": "probe",
-        "Description": "Update a probe on a pod template"
-    },
-    "resources": {
-        "Text": "resources",
-        "Description": "Update resource requests/limits on objects with pod templates"
-    },
-    "selector": {
-        "Text": "selector",
-        "Description": "Set the selector on a resource"
-    },
-    "serviceaccount": {
-        "Text": "serviceaccount",
-        "Description": "Update the service account of a resource"
-    },
-    "volumes": {
-        "Text": "volumes",
-        "Description": "Update volumes on a pod template"
-    },
-    "data": {
-        "Text": "data",
-        "Description": "Update the data within a config map or secret"
-    },
-    "build-secret": {
-        "Text": "build-secret",
-        "Description": "Update a build secret on a build config"
-    },
-    "build-hook": {
-        "Text": "build-hook",
-        "Description": "Update a build hook on a build config"
-    },
-    "image-lookup": {
-        "Text": "image-lookup",
-        "Description": "Change how images are resolved when deploying applications"
-    },
-    "triggers": {
-        "Text": "triggers",
-        "Description": "Update the triggers on one or more objects"
-    },
-    "route-backends": {
-        "Text": "route-backends",
-        "Description": "Update the backends for a route"
-    },
-    "subject": {
-        "Text": "subject",
-        "Description": "Update the user, group, or service account in a role binding or cluster role binding"
+    "Usage": "oc set COMMAND [flags]",
+    "Arguments": {
+        "deployment-hook": {
+            "Text": "deployment-hook",
+            "Description": "Update a deployment hook on a deployment config"
+        },
+        "env": {
+            "Text": "env",
+            "Description": "Update environment variables on a pod template"
+        },
+        "image": {
+            "Text": "image",
+            "Description": "Update the image of a pod template"
+        },
+        "probe": {
+            "Text": "probe",
+            "Description": "Update a probe on a pod template"
+        },
+        "resources": {
+            "Text": "resources",
+            "Description": "Update resource requests/limits on objects with pod templates"
+        },
+        "selector": {
+            "Text": "selector",
+            "Description": "Set the selector on a resource"
+        },
+        "serviceaccount": {
+            "Text": "serviceaccount",
+            "Description": "Update the service account of a resource"
+        },
+        "volumes": {
+            "Text": "volumes",
+            "Description": "Update volumes on a pod template"
+        },
+        "data": {
+            "Text": "data",
+            "Description": "Update the data within a config map or secret"
+        },
+        "build-secret": {
+            "Text": "build-secret",
+            "Description": "Update a build secret on a build config"
+        },
+        "build-hook": {
+            "Text": "build-hook",
+            "Description": "Update a build hook on a build config"
+        },
+        "image-lookup": {
+            "Text": "image-lookup",
+            "Description": "Change how images are resolved when deploying applications"
+        },
+        "triggers": {
+            "Text": "triggers",
+            "Description": "Update the triggers on one or more objects"
+        },
+        "route-backends": {
+            "Text": "route-backends",
+            "Description": "Update the backends for a route"
+        },
+        "subject": {
+            "Text": "subject",
+            "Description": "Update the user, group, or service account in a role binding or cluster role binding"
+        }
     }
 }

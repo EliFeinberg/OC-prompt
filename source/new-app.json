@@ -1,182 +1,185 @@
 {
-    "--allow-missing-images=false": {
-        "Text": "--allow-missing-images=false",
-        "Description": "If true, indicates that referenced container images that cannot be found locally or in a registry should still be used."
-    },
-    "--allow-missing-imagestream-tags=false": {
-        "Text": "--allow-missing-imagestream-tags=false",
-        "Description": "If true, indicates that image stream tags that don't exist should still be used."
-    },
-    "--allow-missing-template-keys=false": {
-        "Text": "--allow-missing-template-keys=false",
-        "Description": "If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats."
-    },
-    "--as-deployment-config=false": {
-        "Text": "--as-deployment-config=false",
-        "Description": "If true create this application as a deployment config, which allows for hooks and custom strategies."
-    },
-    "--as-test=false": {
-        "Text": "--as-test=false",
-        "Description": "If true create this application as a test deployment, which validates that the deployment succeeds and then scales down."
-    },
-    "--binary=false": {
-        "Text": "--binary=false",
-        "Description": "Instead of expecting a source URL, set the build to expect binary contents. Will disable triggers."
-    },
-    "--build-env=[]": {
-        "Text": "--build-env=[]",
-        "Description": "Specify a key-value pair for an environment variable to set into each build image."
-    },
-    "--build-env-file=[]": {
-        "Text": "--build-env-file=[]",
-        "Description": "File containing key-value pairs of environment variables to set into each build image."
-    },
-    "--code=[]": {
-        "Text": "--code=[]",
-        "Description": "Source code to use to build this application."
-    },
-    "--context-dir=''": {
-        "Text": "--context-dir=''",
-        "Description": "Context directory to be used for the build."
-    },
-    "--dry-run=false": {
-        "Text": "--dry-run=false",
-        "Description": "If true, show the result of the operation without performing it."
-    },
-    "-e": {
-        "Text": "-e",
-        "Description": "Specify a key-value pair for an environment variable to set into each container."
-    },
-    "--env=[]": {
-        "Text": "--env=[]",
-        "Description": "Specify a key-value pair for an environment variable to set into each container."
-    },
-    "--env-file=[]": {
-        "Text": "--env-file=[]",
-        "Description": "File containing key-value pairs of environment variables to set into each container."
-    },
-    "-f": {
-        "Text": "-f",
-        "Description": "Path to a template file to use for the app."
-    },
-    "--file=[]": {
-        "Text": "--file=[]",
-        "Description": "Path to a template file to use for the app."
-    },
-    "--grant-install-rights=false": {
-        "Text": "--grant-install-rights=false",
-        "Description": "If true, a component that requires access to your account may use your token to install software into your project. Only grant images you trust the right to run with your token."
-    },
-    "--group=[]": {
-        "Text": "--group=[]",
-        "Description": "Indicate components that should be grouped together as <comp1>+<comp2>."
-    },
-    "--ignore-unknown-parameters=false": {
-        "Text": "--ignore-unknown-parameters=false",
-        "Description": "If true, will not stop processing if a provided parameter does not exist in the template."
-    },
-    "--image=[]": {
-        "Text": "--image=[]",
-        "Description": "Name of a container image to include in the app. "
-    },
-    "-i": {
-        "Text": "-i",
-        "Description": "Name of an image stream to use in the app."
-    },
-    "--image-stream=[]": {
-        "Text": "--image-stream=[]",
-        "Description": "Name of an image stream to use in the app."
-    },
-    "--insecure-registry=false": {
-        "Text": "--insecure-registry=false",
-        "Description": "If true, indicates that the referenced container images are on insecure registries and should bypass certificate checking"
-    },
-    "-l": {
-        "Text": "-l",
-        "Description": "Label to set in all resources for this application."
-    },
-    "--labels=''": {
-        "Text": "--labels=''",
-        "Description": "Label to set in all resources for this application."
-    },
-    "-L": {
-        "Text": "-L",
-        "Description": "List all local templates and image streams that can be used to create."
-    },
-    "--list=false": {
-        "Text": "--list=false",
-        "Description": "List all local templates and image streams that can be used to create."
-    },
-    "--name=''": {
-        "Text": "--name=''",
-        "Description": "Set name to use for generated application artifacts"
-    },
-    "--no-install=false": {
-        "Text": "--no-install=false",
-        "Description": "Do not attempt to run images that describe themselves as being installable"
-    },
-    "-o": {
-        "Text": "-o",
-        "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
-    },
-    "--output=''": {
-        "Text": "--output=''",
-        "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
-    },
-    "--output-version=''": {
-        "Text": "--output-version=''",
-        "Description": "The preferred API versions of the output objects"
-    },
-    "-p": {
-        "Text": "-p",
-        "Description": "Specify a key-value pair (e.g., -p FOO=BAR) to set/override a parameter value in the template."
-    },
-    "--param=[]": {
-        "Text": "--param=[]",
-        "Description": "Specify a key-value pair (e.g., -p FOO=BAR) to set/override a parameter value in the template."
-    },
-    "--param-file=[]": {
-        "Text": "--param-file=[]",
-        "Description": "File containing parameter values to set/override in the template."
-    },
-    "-S": {
-        "Text": "-S",
-        "Description": "Search all templates, image streams, and container images that match the arguments provided."
-    },
-    "--search=false": {
-        "Text": "--search=false",
-        "Description": "Search all templates, image streams, and container images that match the arguments provided."
-    },
-    "-a": {
-        "Text": "-a",
-        "Description": "When printing, show all resources (default hide terminated pods.)"
-    },
-    "--show-all=false": {
-        "Text": "--show-all=false",
-        "Description": "When printing, show all resources (default hide terminated pods.)"
-    },
-    "--show-labels=false": {
-        "Text": "--show-labels=false",
-        "Description": "When printing, show all labels as the last column (default hide labels column)"
-    },
-    "--show-managed-fields=false": {
-        "Text": "--show-managed-fields=false",
-        "Description": "If true, keep the managedFields when printing objects in JSON or YAML format."
-    },
-    "--sort-by=''": {
-        "Text": "--sort-by=''",
-        "Description": "If non-empty, sort list types using this field specification.  The field specification is expressed as a JSONPath expression (e.g. '{.metadata.name}'). The field in the API resource specified by this JSONPath expression must be an integer or a string."
-    },
-    "--source-secret=''": {
-        "Text": "--source-secret=''",
-        "Description": "The name of an existing secret that should be used for cloning a private git repository."
-    },
-    "--strategy=": {
-        "Text": "--strategy=",
-        "Description": "Specify the build strategy to use if you don't want to detect (docker|pipeline|source). "
-    },
-    "--template=[]": {
-        "Text": "--template=[]",
-        "Description": "Name of a stored template to use in the app."
+    "Usage": "oc new-app (IMAGE | IMAGESTREAM | TEMPLATE | PATH | URL ...) [flags]",
+    "Arguments": {
+        "--allow-missing-images=false": {
+            "Text": "--allow-missing-images=false",
+            "Description": "If true, indicates that referenced container images that cannot be found locally or in a registry should still be used."
+        },
+        "--allow-missing-imagestream-tags=false": {
+            "Text": "--allow-missing-imagestream-tags=false",
+            "Description": "If true, indicates that image stream tags that don't exist should still be used."
+        },
+        "--allow-missing-template-keys=false": {
+            "Text": "--allow-missing-template-keys=false",
+            "Description": "If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats."
+        },
+        "--as-deployment-config=false": {
+            "Text": "--as-deployment-config=false",
+            "Description": "If true create this application as a deployment config, which allows for hooks and custom strategies."
+        },
+        "--as-test=false": {
+            "Text": "--as-test=false",
+            "Description": "If true create this application as a test deployment, which validates that the deployment succeeds and then scales down."
+        },
+        "--binary=false": {
+            "Text": "--binary=false",
+            "Description": "Instead of expecting a source URL, set the build to expect binary contents. Will disable triggers."
+        },
+        "--build-env=[]": {
+            "Text": "--build-env=[]",
+            "Description": "Specify a key-value pair for an environment variable to set into each build image."
+        },
+        "--build-env-file=[]": {
+            "Text": "--build-env-file=[]",
+            "Description": "File containing key-value pairs of environment variables to set into each build image."
+        },
+        "--code=[]": {
+            "Text": "--code=[]",
+            "Description": "Source code to use to build this application."
+        },
+        "--context-dir=''": {
+            "Text": "--context-dir=''",
+            "Description": "Context directory to be used for the build."
+        },
+        "--dry-run=false": {
+            "Text": "--dry-run=false",
+            "Description": "If true, show the result of the operation without performing it."
+        },
+        "-e": {
+            "Text": "-e",
+            "Description": "Specify a key-value pair for an environment variable to set into each container."
+        },
+        "--env=[]": {
+            "Text": "--env=[]",
+            "Description": "Specify a key-value pair for an environment variable to set into each container."
+        },
+        "--env-file=[]": {
+            "Text": "--env-file=[]",
+            "Description": "File containing key-value pairs of environment variables to set into each container."
+        },
+        "-f": {
+            "Text": "-f",
+            "Description": "Path to a template file to use for the app."
+        },
+        "--file=[]": {
+            "Text": "--file=[]",
+            "Description": "Path to a template file to use for the app."
+        },
+        "--grant-install-rights=false": {
+            "Text": "--grant-install-rights=false",
+            "Description": "If true, a component that requires access to your account may use your token to install software into your project. Only grant images you trust the right to run with your token."
+        },
+        "--group=[]": {
+            "Text": "--group=[]",
+            "Description": "Indicate components that should be grouped together as <comp1>+<comp2>."
+        },
+        "--ignore-unknown-parameters=false": {
+            "Text": "--ignore-unknown-parameters=false",
+            "Description": "If true, will not stop processing if a provided parameter does not exist in the template."
+        },
+        "--image=[]": {
+            "Text": "--image=[]",
+            "Description": "Name of a container image to include in the app. "
+        },
+        "-i": {
+            "Text": "-i",
+            "Description": "Name of an image stream to use in the app."
+        },
+        "--image-stream=[]": {
+            "Text": "--image-stream=[]",
+            "Description": "Name of an image stream to use in the app."
+        },
+        "--insecure-registry=false": {
+            "Text": "--insecure-registry=false",
+            "Description": "If true, indicates that the referenced container images are on insecure registries and should bypass certificate checking"
+        },
+        "-l": {
+            "Text": "-l",
+            "Description": "Label to set in all resources for this application."
+        },
+        "--labels=''": {
+            "Text": "--labels=''",
+            "Description": "Label to set in all resources for this application."
+        },
+        "-L": {
+            "Text": "-L",
+            "Description": "List all local templates and image streams that can be used to create."
+        },
+        "--list=false": {
+            "Text": "--list=false",
+            "Description": "List all local templates and image streams that can be used to create."
+        },
+        "--name=''": {
+            "Text": "--name=''",
+            "Description": "Set name to use for generated application artifacts"
+        },
+        "--no-install=false": {
+            "Text": "--no-install=false",
+            "Description": "Do not attempt to run images that describe themselves as being installable"
+        },
+        "-o": {
+            "Text": "-o",
+            "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
+        },
+        "--output=''": {
+            "Text": "--output=''",
+            "Description": "Output format. One of json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-as-json|jsonpath-file."
+        },
+        "--output-version=''": {
+            "Text": "--output-version=''",
+            "Description": "The preferred API versions of the output objects"
+        },
+        "-p": {
+            "Text": "-p",
+            "Description": "Specify a key-value pair (e.g., -p FOO=BAR) to set/override a parameter value in the template."
+        },
+        "--param=[]": {
+            "Text": "--param=[]",
+            "Description": "Specify a key-value pair (e.g., -p FOO=BAR) to set/override a parameter value in the template."
+        },
+        "--param-file=[]": {
+            "Text": "--param-file=[]",
+            "Description": "File containing parameter values to set/override in the template."
+        },
+        "-S": {
+            "Text": "-S",
+            "Description": "Search all templates, image streams, and container images that match the arguments provided."
+        },
+        "--search=false": {
+            "Text": "--search=false",
+            "Description": "Search all templates, image streams, and container images that match the arguments provided."
+        },
+        "-a": {
+            "Text": "-a",
+            "Description": "When printing, show all resources (default hide terminated pods.)"
+        },
+        "--show-all=false": {
+            "Text": "--show-all=false",
+            "Description": "When printing, show all resources (default hide terminated pods.)"
+        },
+        "--show-labels=false": {
+            "Text": "--show-labels=false",
+            "Description": "When printing, show all labels as the last column (default hide labels column)"
+        },
+        "--show-managed-fields=false": {
+            "Text": "--show-managed-fields=false",
+            "Description": "If true, keep the managedFields when printing objects in JSON or YAML format."
+        },
+        "--sort-by=''": {
+            "Text": "--sort-by=''",
+            "Description": "If non-empty, sort list types using this field specification.  The field specification is expressed as a JSONPath expression (e.g. '{.metadata.name}'). The field in the API resource specified by this JSONPath expression must be an integer or a string."
+        },
+        "--source-secret=''": {
+            "Text": "--source-secret=''",
+            "Description": "The name of an existing secret that should be used for cloning a private git repository."
+        },
+        "--strategy=": {
+            "Text": "--strategy=",
+            "Description": "Specify the build strategy to use if you don't want to detect (docker|pipeline|source). "
+        },
+        "--template=[]": {
+            "Text": "--template=[]",
+            "Description": "Name of a stored template to use in the app."
+        }
     }
 }

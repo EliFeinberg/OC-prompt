@@ -1,6 +1,9 @@
 {
-    "list": {
-        "Text": "list",
-        "Description": "List all visible plugin executables on a user's PATH"
+    "Usage": "oc plugin [flags]",
+    "Arguments": {
+        "list": {
+            "Text": "list",
+            "Description": "List all visible plugin executables on a user's PATH"
+        }
     }
 }

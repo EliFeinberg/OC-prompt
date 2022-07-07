@@ -1,62 +1,65 @@
 {
-    "current-context": {
-        "Text": "current-context",
-        "Description": "Display the current-context"
-    },
-    "delete-cluster": {
-        "Text": "delete-cluster",
-        "Description": "Delete the specified cluster from the kubeconfig"
-    },
-    "delete-context": {
-        "Text": "delete-context",
-        "Description": "Delete the specified context from the kubeconfig"
-    },
-    "delete-user": {
-        "Text": "delete-user",
-        "Description": "Delete the specified user from the kubeconfig"
-    },
-    "get-clusters": {
-        "Text": "get-clusters",
-        "Description": "Display clusters defined in the kubeconfig"
-    },
-    "get-contexts": {
-        "Text": "get-contexts",
-        "Description": "Describe one or many contexts"
-    },
-    "get-users": {
-        "Text": "get-users",
-        "Description": "Display users defined in the kubeconfig"
-    },
-    "rename-context": {
-        "Text": "rename-context",
-        "Description": "Rename a context from the kubeconfig file"
-    },
-    "set": {
-        "Text": "set",
-        "Description": "Set an individual value in a kubeconfig file"
-    },
-    "set-cluster": {
-        "Text": "set-cluster",
-        "Description": "Set a cluster entry in kubeconfig"
-    },
-    "set-context": {
-        "Text": "set-context",
-        "Description": "Set a context entry in kubeconfig"
-    },
-    "set-credentials": {
-        "Text": "set-credentials",
-        "Description": "Set a user entry in kubeconfig"
-    },
-    "unset": {
-        "Text": "unset",
-        "Description": "Unset an individual value in a kubeconfig file"
-    },
-    "use-context": {
-        "Text": "use-context",
-        "Description": "Set the current-context in a kubeconfig file"
-    },
-    "view": {
-        "Text": "view",
-        "Description": "Display merged kubeconfig settings or a specified kubeconfig file"
+    "Usage": "oc config SUBCOMMAND [flags]",
+    "Arguments": {
+        "current-context": {
+            "Text": "current-context",
+            "Description": "Display the current-context"
+        },
+        "delete-cluster": {
+            "Text": "delete-cluster",
+            "Description": "Delete the specified cluster from the kubeconfig"
+        },
+        "delete-context": {
+            "Text": "delete-context",
+            "Description": "Delete the specified context from the kubeconfig"
+        },
+        "delete-user": {
+            "Text": "delete-user",
+            "Description": "Delete the specified user from the kubeconfig"
+        },
+        "get-clusters": {
+            "Text": "get-clusters",
+            "Description": "Display clusters defined in the kubeconfig"
+        },
+        "get-contexts": {
+            "Text": "get-contexts",
+            "Description": "Describe one or many contexts"
+        },
+        "get-users": {
+            "Text": "get-users",
+            "Description": "Display users defined in the kubeconfig"
+        },
+        "rename-context": {
+            "Text": "rename-context",
+            "Description": "Rename a context from the kubeconfig file"
+        },
+        "set": {
+            "Text": "set",
+            "Description": "Set an individual value in a kubeconfig file"
+        },
+        "set-cluster": {
+            "Text": "set-cluster",
+            "Description": "Set a cluster entry in kubeconfig"
+        },
+        "set-context": {
+            "Text": "set-context",
+            "Description": "Set a context entry in kubeconfig"
+        },
+        "set-credentials": {
+            "Text": "set-credentials",
+            "Description": "Set a user entry in kubeconfig"
+        },
+        "unset": {
+            "Text": "unset",
+            "Description": "Unset an individual value in a kubeconfig file"
+        },
+        "use-context": {
+            "Text": "use-context",
+            "Description": "Set the current-context in a kubeconfig file"
+        },
+        "view": {
+            "Text": "view",
+            "Description": "Display merged kubeconfig settings or a specified kubeconfig file"
+        }
     }
 }

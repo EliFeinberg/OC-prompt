@@ -1,14 +1,17 @@
 {
-    "--client=false": {
-        "Text": "--client=false",
-        "Description": "Client version only (no server required)."
-    },
-    "-o": {
-        "Text": "-o",
-        "Description": "One of 'yaml' or 'json'."
-    },
-    "--output=''": {
-        "Text": "--output=''",
-        "Description": "One of 'yaml' or 'json'."
+    "Usage": "oc version [flags]",
+    "Arguments": {
+        "--client=false": {
+            "Text": "--client=false",
+            "Description": "Client version only (no server required)."
+        },
+        "-o": {
+            "Text": "-o",
+            "Description": "One of 'yaml' or 'json'."
+        },
+        "--output=''": {
+            "Text": "--output=''",
+            "Description": "One of 'yaml' or 'json'."
+        }
     }
 }

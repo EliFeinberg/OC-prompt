@@ -1,34 +1,37 @@
 {
-  "--api-group=''": {
-    "Text": "--api-group='",
-    "Description": "Limit to resources in the specified API group."
-  },
-  "--cached=false": {
-    "Text": "--cached=false",
-    "Description": "Use the cached list of resources if available."
-  },
-  "--namespaced=true": {
-    "Text": "--namespaced=true",
-    "Description": "If false, non-namespaced resources will be returned, otherwise returning namespaced resources by default."
-  },
-  "--no-headers=false": {
-    "Text": "--no-headers=false",
-    "Description": "When using the default or custom-column output format, don't print headers (default print headers)."
-  },
-  "-o": {
-    "Text": "-o",
-    "Description": "Output format. One of wide|name."
-  },
-  "--output=''": {
-    "Text": "--output=''",
-    "Description": "Output format. One of wide|name."
-  },
-  "--sort-by=''": {
-    "Text": "--sort-by=''",
-    "Description": "If non-empty, sort list of resources using specified field. The field can be either 'name' or 'kind'."
-  },
-  "--verbs=[]": {
-    "Text": "--verbs=[]",
-    "Description": "Limit to resources that support the specified verbs."
+  "Usage": "oc api-resources [flags]",
+  "Arguments": {
+    "--api-group=''": {
+      "Text": "--api-group='",
+      "Description": "Limit to resources in the specified API group."
+    },
+    "--cached=false": {
+      "Text": "--cached=false",
+      "Description": "Use the cached list of resources if available."
+    },
+    "--namespaced=true": {
+      "Text": "--namespaced=true",
+      "Description": "If false, non-namespaced resources will be returned, otherwise returning namespaced resources by default."
+    },
+    "--no-headers=false": {
+      "Text": "--no-headers=false",
+      "Description": "When using the default or custom-column output format, don't print headers (default print headers)."
+    },
+    "-o": {
+      "Text": "-o",
+      "Description": "Output format. One of wide|name."
+    },
+    "--output=''": {
+      "Text": "--output=''",
+      "Description": "Output format. One of wide|name."
+    },
+    "--sort-by=''": {
+      "Text": "--sort-by=''",
+      "Description": "If non-empty, sort list of resources using specified field. The field can be either 'name' or 'kind'."
+    },
+    "--verbs=[]": {
+      "Text": "--verbs=[]",
+      "Description": "Limit to resources that support the specified verbs."
+    }
   }
 }

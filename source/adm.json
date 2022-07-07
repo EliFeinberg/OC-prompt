@@ -1,98 +1,101 @@
 {
-    "upgrade": {
-        "Text": "upgrade",
-        "Description": "Upgrade a cluster"
-    },
-    "top": {
-        "Text": "top",
-        "Description": "Show usage statistics of resources on the server"
-    },
-    "must-gather": {
-        "Text": "must-gather",
-        "Description": "Launch a new instance of a pod for gathering debug information"
-    },
-    "inspect": {
-        "Text": "inspect",
-        "Description": "Collect debugging data for a given resource"
-    },
-    "drain": {
-        "Text": "drain",
-        "Description": "Drain node in preparation for maintenance"
-    },
-    "cordon": {
-        "Text": "cordon",
-        "Description": "Mark node as unschedulable"
-    },
-    "uncordon": {
-        "Text": "uncordon",
-        "Description": "Mark node as schedulable"
-    },
-    "taint": {
-        "Text": "taint",
-        "Description": "Update the taints on one or more nodes"
-    },
-    "node-logs": {
-        "Text": "node-logs",
-        "Description": "Display and filter node logs"
-    },
-    "new-project": {
-        "Text": "new-project",
-        "Description": "Create a new project"
-    },
-    "policy": {
-        "Text": "policy",
-        "Description": "Manage cluster authorization and security policy"
-    },
-    "groups": {
-        "Text": "groups",
-        "Description": "Manage groups"
-    },
-    "certificate": {
-        "Text": "certificate",
-        "Description": "Approve or reject certificate requests"
-    },
-    "pod-network": {
-        "Text": "pod-network",
-        "Description": "Manage pod network"
-    },
-    "prune": {
-        "Text": "prune",
-        "Description": "Remove older versions of resources from the server"
-    },
-    "migrate": {
-        "Text": "migrate",
-        "Description": "Migrate data in the cluster"
-    },
-    "create-kubeconfig": {
-        "Text": "create-kubeconfig",
-        "Description": "Create a basic .kubeconfig file from client certs"
-    },
-    "create-bootstrap-project-e": {
-        "Text": "create-bootstrap-project-e",
-        "Description": "Create a bootstrap project template"
-    },
-    "create-login-template": {
-        "Text": "create-login-template",
-        "Description": "Create a login template"
-    },
-    "create-provider-selection-e": {
-        "Text": "create-provider-selection-e",
-        "Description": "Create a provider selection template"
-    },
-    "create-error-template": {
-        "Text": "create-error-template",
-        "Description": "Create an error page template"
-    },
-    "build-chain": {
-        "Text": "build-chain",
-        "Description": "Output the inputs and dependencies of your builds"
-    },
-    "catalog": {
-        "Text": "catalog",
-        "Description": "Tools for managing the OpenShift OLM Catalogs"
-    },
-    "verify-image-signature": {
-        "Text": "verify-image-signature",
-        "Description": "Verify the image identity contained in the image "
+    "Usage": "oc adm [flags]",
+    "Arguments": {
+        "upgrade": {
+            "Text": "upgrade",
+            "Description": "Upgrade a cluster"
+        },
+        "top": {
+            "Text": "top",
+            "Description": "Show usage statistics of resources on the server"
+        },
+        "must-gather": {
+            "Text": "must-gather",
+            "Description": "Launch a new instance of a pod for gathering debug information"
+        },
+        "inspect": {
+            "Text": "inspect",
+            "Description": "Collect debugging data for a given resource"
+        },
+        "drain": {
+            "Text": "drain",
+            "Description": "Drain node in preparation for maintenance"
+        },
+        "cordon": {
+            "Text": "cordon",
+            "Description": "Mark node as unschedulable"
+        },
+        "uncordon": {
+            "Text": "uncordon",
+            "Description": "Mark node as schedulable"
+        },
+        "taint": {
+            "Text": "taint",
+            "Description": "Update the taints on one or more nodes"
+        },
+        "node-logs": {
+            "Text": "node-logs",
+            "Description": "Display and filter node logs"
+        },
+        "new-project": {
+            "Text": "new-project",
+            "Description": "Create a new project"
+        },
+        "policy": {
+            "Text": "policy",
+            "Description": "Manage cluster authorization and security policy"
+        },
+        "groups": {
+            "Text": "groups",
+            "Description": "Manage groups"
+        },
+        "certificate": {
+            "Text": "certificate",
+            "Description": "Approve or reject certificate requests"
+        },
+        "pod-network": {
+            "Text": "pod-network",
+            "Description": "Manage pod network"
+        },
+        "prune": {
+            "Text": "prune",
+            "Description": "Remove older versions of resources from the server"
+        },
+        "migrate": {
+            "Text": "migrate",
+            "Description": "Migrate data in the cluster"
+        },
+        "create-kubeconfig": {
+            "Text": "create-kubeconfig",
+            "Description": "Create a basic .kubeconfig file from client certs"
+        },
+        "create-bootstrap-project-e": {
+            "Text": "create-bootstrap-project-e",
+            "Description": "Create a bootstrap project template"
+        },
+        "create-login-template": {
+            "Text": "create-login-template",
+            "Description": "Create a login template"
+        },
+        "create-provider-selection-e": {
+            "Text": "create-provider-selection-e",
+            "Description": "Create a provider selection template"
+        },
+        "create-error-template": {
+            "Text": "create-error-template",
+            "Description": "Create an error page template"
+        },
+        "build-chain": {
+            "Text": "build-chain",
+            "Description": "Output the inputs and dependencies of your builds"
+        },
+        "catalog": {
+            "Text": "catalog",
+            "Description": "Tools for managing the OpenShift OLM Catalogs"
+        },
+        "verify-image-signature": {
+            "Text": "verify-image-signature",
+            "Description": "Verify the image identity contained in the image "
+        }
     }
 }

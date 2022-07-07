@@ -1,22 +1,25 @@
 {
-    "--confirm=false": {
-        "Text": "--confirm=false",
-        "Description": "If true, overwrite files that already exist."
-    },
-    "-f": {
-        "Text": "-f",
-        "Description": "Filename, directory, or URL to file to identify to extract the resource."
-    },
-    "--filename=[]": {
-        "Text": "--filename=[]",
-        "Description": "Filename, directory, or URL to file to identify to extract the resource."
-    },
-    "--keys=[]": {
-        "Text": "--keys=[]",
-        "Description": "An optional list of keys to extract (default is all keys)."
-    },
-    "--to='.'": {
-        "Text": "--to='.'",
-        "Description": "Directory to extract files to."
+    "Usage": "oc extract RESOURCE/NAME [--to=DIRECTORY] [--keys=KEY ...] [flags]",
+    "Arguments": {
+        "--confirm=false": {
+            "Text": "--confirm=false",
+            "Description": "If true, overwrite files that already exist."
+        },
+        "-f": {
+            "Text": "-f",
+            "Description": "Filename, directory, or URL to file to identify to extract the resource."
+        },
+        "--filename=[]": {
+            "Text": "--filename=[]",
+            "Description": "Filename, directory, or URL to file to identify to extract the resource."
+        },
+        "--keys=[]": {
+            "Text": "--keys=[]",
+            "Description": "An optional list of keys to extract (default is all keys)."
+        },
+        "--to='.'": {
+            "Text": "--to='.'",
+            "Description": "Directory to extract files to."
+        }
     }
 }

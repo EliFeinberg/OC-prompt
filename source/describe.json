@@ -1,50 +1,53 @@
 {
-  "-A": {
-    "Text": "-A",
-    "Description": "If present, list the requested object(s) across all namespaces. Namespace in current context is ignored even if specified with --namespace."
-  },
-  "--all-namespaces=false": {
-    "Text": "--all-namespaces=false",
-    "Description": "If present, list the requested object(s) across all namespaces. Namespace in current context is ignored even if specified with --namespace."
-  },
-  "--chunk-size=500": {
-    "Text": "--chunk-size=500",
-    "Description": "Return large lists in chunks rather than all at once. Pass 0 to disable. This flag is beta and may change in the future."
-  },
-  "-f": {
-    "Text": "-f",
-    "Description": "Filename, directory, or URL to files containing the resource to describe"
-  },
-  "--filename=[]": {
-    "Text": "--filename=[]",
-    "Description": "Filename, directory, or URL to files containing the resource to describe"
-  },
-  "-k": {
-    "Text": "-k",
-    "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
-  },
-  "--kustomize=''": {
-    "Text": "--kustomize=''",
-    "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
-  },
-  "-R": {
-    "Text": "-R",
-    "Description": "Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
-  },
-  "--recursive=false": {
-    "Text": "--recursive=false",
-    "Description": "Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
-  },
-  "-l": {
-    "Text": "-l",
-    "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
-  },
-  "--selector=''": {
-    "Text": "--selector=''",
-    "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
-  },
-  "--show-events=true": {
-    "Text": "--show-events=true",
-    "Description": "If true, display events related to the described object."
+  "Usage": "oc describe (-f FILENAME | TYPE [NAME_PREFIX | -l label] | TYPE/NAME) [flags]",
+  "Arguments": {
+    "-A": {
+      "Text": "-A",
+      "Description": "If present, list the requested object(s) across all namespaces. Namespace in current context is ignored even if specified with --namespace."
+    },
+    "--all-namespaces=false": {
+      "Text": "--all-namespaces=false",
+      "Description": "If present, list the requested object(s) across all namespaces. Namespace in current context is ignored even if specified with --namespace."
+    },
+    "--chunk-size=500": {
+      "Text": "--chunk-size=500",
+      "Description": "Return large lists in chunks rather than all at once. Pass 0 to disable. This flag is beta and may change in the future."
+    },
+    "-f": {
+      "Text": "-f",
+      "Description": "Filename, directory, or URL to files containing the resource to describe"
+    },
+    "--filename=[]": {
+      "Text": "--filename=[]",
+      "Description": "Filename, directory, or URL to files containing the resource to describe"
+    },
+    "-k": {
+      "Text": "-k",
+      "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
+    },
+    "--kustomize=''": {
+      "Text": "--kustomize=''",
+      "Description": "Process the kustomization directory. This flag can't be used together with -f or -R."
+    },
+    "-R": {
+      "Text": "-R",
+      "Description": "Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
+    },
+    "--recursive=false": {
+      "Text": "--recursive=false",
+      "Description": "Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory."
+    },
+    "-l": {
+      "Text": "-l",
+      "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+    },
+    "--selector=''": {
+      "Text": "--selector=''",
+      "Description": "Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)"
+    },
+    "--show-events=true": {
+      "Text": "--show-events=true",
+      "Description": "If true, display events related to the described object."
+    }
   }
 }

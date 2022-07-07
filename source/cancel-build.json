@@ -1,14 +1,17 @@
 {
-    "--dump-logs=false": {
-        "Text": "--dump-logs=false",
-        "Description": "Specify if the build logs for the cancelled build should be shown."
-    },
-    "--restart=false": {
-        "Text": "--restart=false",
-        "Description": "Specify if a new build should be created after the current build is cancelled."
-    },
-    "--state=[new,pending,running]": {
-        "Text": "--state=[new,pending,running]",
-        "Description": "Only cancel builds in this state"
+    "Usage": "oc cancel-build (BUILD | BUILDCONFIG) [flags]",
+    "Arguments": {
+        "--dump-logs=false": {
+            "Text": "--dump-logs=false",
+            "Description": "Specify if the build logs for the cancelled build should be shown."
+        },
+        "--restart=false": {
+            "Text": "--restart=false",
+            "Description": "Specify if a new build should be created after the current build is cancelled."
+        },
+        "--state=[new,pending,running]": {
+            "Text": "--state=[new,pending,running]",
+            "Description": "Only cancel builds in this state"
+        }
     }
 }
