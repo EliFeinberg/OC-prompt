@@ -17,7 +17,7 @@ var OC_COMMANDS []string
 var GLOBAL_OP []prompt.Suggest
 var GlobalFlags = false
 var prune = true
-var helpOp = true
+var helpOp = false
 var stderr bytes.Buffer
 
 func completer(d prompt.Document) []prompt.Suggest {
@@ -44,7 +44,7 @@ func completer(d prompt.Document) []prompt.Suggest {
 			pruneUsedArgs(CMDargs, &s)
 		}
 
-	} else {
+	} else if len(CMDargs) < 2 {
 		s = OC_COMMANDS_SUGGEST
 	}
 	if helpOp {
@@ -77,7 +77,14 @@ func main() {
 			"oc ",
 			completer,
 			prompt.OptionTitle("RHOCP CLI"),
-			prompt.OptionSelectedDescriptionTextColor(prompt.DarkGray))
+			prompt.OptionSuggestionTextColor(prompt.Black),
+			prompt.OptionSuggestionBGColor(prompt.DarkBlue),
+			prompt.OptionSelectedDescriptionBGColor(prompt.Black),
+			prompt.OptionSelectedSuggestionBGColor(prompt.Black),
+			prompt.OptionSelectedDescriptionTextColor(prompt.White),
+			prompt.OptionSelectedSuggestionTextColor(prompt.White),
+			prompt.OptionSelectedDescriptionTextColor(prompt.Black),
+			prompt.OptionDescriptionBGColor(prompt.DarkBlue))
 		CMDargs := strings.Split(t, " ")
 		if CMDargs[0] == "exit" {
 			os.Exit(0)
@@ -86,7 +93,6 @@ func main() {
 			ps = exec.Command("clear")
 		} else {
 			ps = exec.Command("oc", CMDargs...)
-			// fmt.Println(CMDargs)
 		}
 		ps.Stderr = &stderr
 		res, err := ps.Output()

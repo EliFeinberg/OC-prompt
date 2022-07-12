@@ -176,6 +176,8 @@ var global_op []prompt.Suggest = []prompt.Suggest{
 	{Text: "--warnings-as-errors=false", Description: "Treat warnings received from the server as errors and exit with a non-zero exit code"},
 }
 
+var suggestedPorts []prompt.Suggest = []prompt.Suggest{}
+
 var usage map[string]string = map[string]string{
 	"new-build":       "(IMAGE | IMAGESTREAM | PATH | URL ...) [flags]",
 	"adm":             "[flags]",
