@@ -2,6 +2,16 @@ package resources
 
 import "github.com/c-bata/go-prompt"
 
+/*
+ * This file contains the resources for static suggestions for openshift
+ *
+ * Originally OC-Prompt parsed a json file to allow for flexibility
+ * however this made using a binary much more difficult. If you would
+ * like to use the json files in source you must change how the
+ * global variables are set in main.go and use parse.go to parse the
+ * needed json files.
+ */
+
 var commands []prompt.Suggest = []prompt.Suggest{
 	{Text: "login", Description: "Log in to a server"},
 	{Text: "new-project", Description: "Request a new project"},

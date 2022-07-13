@@ -26,7 +26,7 @@ Interactive CLI tool for OpenShift. Includes autocomplete for valid functions an
 - [x] create a completer function
 ## Phase 2
 - [ ] Implement Usage instruction for each Openshift Command
-- [ ] Pull Recommended local files Into AutoComplete
+- [x] Pull Recommended local files Into AutoComplete
 - [ ] Pull Recommended Ports Into Autocomplete
 
 ## Phase 3

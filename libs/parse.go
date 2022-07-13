@@ -9,8 +9,7 @@ import (
 	"github.com/c-bata/go-prompt"
 )
 
-// func ParseCommands(path string) map[string]string
-
+// Parse json file from a given filepath string
 func ParseFiletoSuggest(path string) []prompt.Suggest {
 	// Opens Json file to be parsed
 	contents, err := os.Open(path)
@@ -38,6 +37,7 @@ func ParseFiletoSuggest(path string) []prompt.Suggest {
 	return Commands
 }
 
+// Helper function used in dupping the contens of --help for each command
 func WriteHelp(str string, cmd string) {
 
 	f, _ := os.Create("source/Parse-Code/" + cmd + ".txt")
@@ -48,6 +48,7 @@ func WriteHelp(str string, cmd string) {
 	fmt.Printf("wrote %d bytes\n", n2)
 }
 
+// Function used to create a list of every command used in validating commands
 func ParseFileForCommandList(path string) []string {
 	// Opens Json file to be parsed
 	contents, err := os.Open(path)
