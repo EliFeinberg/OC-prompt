@@ -36,9 +36,12 @@ func completer(d prompt.Document) []prompt.Suggest {
 			return []prompt.Suggest{}
 		} else if CMDargs[0] == "logout" {
 			return []prompt.Suggest{}
-		} else if len(CMDargs) > 2 && CMDargs[len(CMDargs)-2] == "-f" || strings.Contains(CMDargs[len(CMDargs)-1], "--filename") {
+		} else if len(CMDargs) > 2 && CMDargs[len(CMDargs)-2] == "-f" {
 			// Completer for Local YAML files
 			s = libs.FileCompleter.Complete(d)
+		} else if strings.Contains(CMDargs[len(CMDargs)-1], "--port=") {
+			// Completer for Local YAML files
+			s = libs.PortSuggest()
 		} else {
 			// Suggestions for valid commands
 			s = resources.CommandFlags()[CMDargs[0]]
@@ -91,14 +94,16 @@ func main() {
 			"oc ",
 			completer,
 			prompt.OptionTitle("RHOCP CLI"),
-			prompt.OptionSuggestionTextColor(prompt.Black),
+			prompt.OptionSuggestionTextColor(prompt.White),
 			prompt.OptionSuggestionBGColor(prompt.DarkBlue),
 			prompt.OptionSelectedDescriptionBGColor(prompt.Black),
+			prompt.OptionPreviewSuggestionTextColor(prompt.White),
 			prompt.OptionSelectedSuggestionBGColor(prompt.Black),
 			prompt.OptionSelectedDescriptionTextColor(prompt.White),
 			prompt.OptionSelectedSuggestionTextColor(prompt.White),
-			prompt.OptionSelectedDescriptionTextColor(prompt.Black),
-			prompt.OptionDescriptionBGColor(prompt.DarkBlue))
+			prompt.OptionSelectedDescriptionTextColor(prompt.White),
+			prompt.OptionDescriptionTextColor(prompt.White),
+			prompt.OptionDescriptionBGColor(prompt.Blue))
 
 		// Seperate Arguments of Command
 		CMDargs := strings.Split(t, " ")
