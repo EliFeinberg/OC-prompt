@@ -1,8 +1,13 @@
 package resources
 
-import "github.com/c-bata/go-prompt"
+import (
+	"go-prompt/libs"
+	"strings"
 
-type UsageType func(prompt.Document, []prompt.Suggest)
+	"github.com/c-bata/go-prompt"
+)
+
+type UsageType func(prompt.Document, *[]prompt.Suggest)
 
 var usage map[string]string = map[string]string{
 	"new-build":       "(IMAGE | IMAGESTREAM | PATH | URL ...) [flags]",
@@ -67,10 +72,34 @@ var usage map[string]string = map[string]string{
 	"kustomize":       "DIR [flags]",
 }
 
-func Usage() map[string]string {
-	return usage
+func Usage() map[string]UsageType {
+	return map[string]UsageType{
+		"set": set,
+	}
 }
 
-func set(d prompt.Document, sug []prompt.Suggest) {
+func set(d prompt.Document, sug *[]prompt.Suggest) {
+	CMDargs := strings.Split(d.Text, " ")
+	cmds := CommandFlags("set")
+	if len(CMDargs) == 2 {
+		for i := 1; i < len(cmds); i++ {
+			for j := 0; j < len(*sug); j++ {
 
+				if !libs.SuggestInList(cmds[i], (*sug)) {
+					*sug = libs.Remove(*sug, j)
+
+				}
+			}
+		}
+	} else if len(CMDargs) >= 3 {
+		for i := 0; i < len(cmds); i++ {
+			for j := 0; j < len(*sug); j++ {
+
+				if cmds[i].Text == (*sug)[j].Text {
+					*sug = libs.Remove(*sug, j)
+
+				}
+			}
+		}
+	}
 }

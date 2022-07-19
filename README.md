@@ -32,9 +32,8 @@ Interactive CLI tool for OpenShift. Includes autocomplete for valid functions an
 ## Phase 3
 - [ ] Create Tool to speed up adding new commands/flag
 - [ ] Create Easy Interface to add new commands
-- [ ] Cache parsed JSON to make runtime faster
 - [ ] Pull Local Images Into Autocomplete
-- [ ] Implement History
+- [x] Implement History
 
 ## Optional Features
 - [ ] login with ENV Vars

@@ -15,7 +15,7 @@ import (
 var OC_COMMANDS_SUGGEST []prompt.Suggest
 var OC_COMMANDS []string
 var GLOBAL_OP []prompt.Suggest
-var GlobalFlags = false
+var GlobalFlags = true
 var prune = true
 var helpOp = false
 var stderr bytes.Buffer
@@ -45,7 +45,10 @@ func completer(d prompt.Document) []prompt.Suggest {
 			s = libs.PortSuggest()
 		} else {
 			// Suggestions for valid commands
-			s = resources.CommandFlags()[CMDargs[0]]
+			s = resources.CommandFlags(CMDargs[0])
+			if CMDargs[0] == "set" {
+				resources.Usage()["set"](d, &s)
+			}
 		}
 		// Extra Settings for Customization
 		if GlobalFlags {
@@ -92,7 +95,7 @@ func main() {
 	// Interface Loop for accepting Commands
 	for {
 		t := prompt.Input(
-			"oc ",
+			"OC >>> ",
 			completer,
 			prompt.OptionTitle("RHOCP CLI"),
 			prompt.OptionSuggestionTextColor(prompt.White),
@@ -114,6 +117,8 @@ func main() {
 		if CMDargs[0] == "exit" {
 			os.Exit(0)
 		}
+		// Add command to history
+		histBuff = append(histBuff, t)
 
 		// Special Case to clear screen
 		if CMDargs[0] == "clear" {
@@ -134,7 +139,6 @@ func main() {
 		} else {
 			// Print output of execution
 			fmt.Println(string(res))
-			histBuff = append(histBuff, t)
 		}
 	}
 }

@@ -86,6 +86,15 @@ func StringInList(elem string, list []string) bool {
 	return false
 }
 
+func SuggestInList(elem prompt.Suggest, list []prompt.Suggest) bool {
+	for _, v := range list {
+		if v.Text == elem.Text {
+			return true
+		}
+	}
+	return false
+}
+
 // Adapted from https://stackoverflow.com/questions/37334119/how-to-delete-an-element-from-a-slice-in-golang
 func Remove(list []prompt.Suggest, index int) []prompt.Suggest {
 	list[index] = list[len(list)-1]

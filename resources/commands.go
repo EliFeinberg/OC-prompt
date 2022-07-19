@@ -1161,8 +1161,10 @@ func Commands() []prompt.Suggest {
 	return commands
 }
 
-func CommandFlags() map[string][]prompt.Suggest {
-	return commandflags
+func CommandFlags(cmd string) []prompt.Suggest {
+	temp := make([]prompt.Suggest, len(commandflags[cmd]))
+	copy(temp, commandflags[cmd])
+	return temp
 }
 
 func GlobalOps() []prompt.Suggest {
