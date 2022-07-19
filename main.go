@@ -19,11 +19,12 @@ var GlobalFlags = false
 var prune = true
 var helpOp = false
 var stderr bytes.Buffer
+var histBuff []string
 
 func completer(d prompt.Document) []prompt.Suggest {
 	CMDargs := strings.Split(d.Text, " ")
 	var s []prompt.Suggest
-
+	prompt.OptionInputTextColor(prompt.Purple)
 	// Check if command is valid
 	if libs.StringInList(CMDargs[0], OC_COMMANDS) {
 
@@ -97,13 +98,14 @@ func main() {
 			prompt.OptionSuggestionTextColor(prompt.White),
 			prompt.OptionSuggestionBGColor(prompt.DarkBlue),
 			prompt.OptionSelectedDescriptionBGColor(prompt.Black),
-			prompt.OptionPreviewSuggestionTextColor(prompt.White),
+			prompt.OptionPreviewSuggestionTextColor(prompt.Cyan),
 			prompt.OptionSelectedSuggestionBGColor(prompt.Black),
 			prompt.OptionSelectedDescriptionTextColor(prompt.White),
 			prompt.OptionSelectedSuggestionTextColor(prompt.White),
 			prompt.OptionSelectedDescriptionTextColor(prompt.White),
 			prompt.OptionDescriptionTextColor(prompt.White),
-			prompt.OptionDescriptionBGColor(prompt.Blue))
+			prompt.OptionDescriptionBGColor(prompt.Blue),
+			prompt.OptionHistory(histBuff))
 
 		// Seperate Arguments of Command
 		CMDargs := strings.Split(t, " ")
@@ -132,6 +134,7 @@ func main() {
 		} else {
 			// Print output of execution
 			fmt.Println(string(res))
+			histBuff = append(histBuff, t)
 		}
 	}
 }
