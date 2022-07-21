@@ -74,18 +74,26 @@ var usage map[string]string = map[string]string{
 
 func Usage() map[string]UsageType {
 	return map[string]UsageType{
-		"set": set,
+		"set":      set,
+		"registry": registry,
+		"image":    image,
 	}
+}
+
+var Implemented []string = []string{
+	"set",
+	"registry",
+	"image",
 }
 
 func set(d prompt.Document, sug *[]prompt.Suggest) {
 	CMDargs := strings.Split(d.Text, " ")
 	cmds := CommandFlags("set")
 	if len(CMDargs) == 2 {
-		for i := 1; i < len(cmds); i++ {
+		for i := 0; i < len(cmds); i++ {
 			for j := 0; j < len(*sug); j++ {
 
-				if !libs.SuggestInList(cmds[i], (*sug)) {
+				if !libs.SuggestInList((*sug)[j], cmds) {
 					*sug = libs.Remove(*sug, j)
 
 				}
@@ -98,6 +106,54 @@ func set(d prompt.Document, sug *[]prompt.Suggest) {
 				if cmds[i].Text == (*sug)[j].Text {
 					*sug = libs.Remove(*sug, j)
 
+				}
+			}
+		}
+	}
+}
+
+func registry(d prompt.Document, sug *[]prompt.Suggest) {
+	CMDargs := strings.Split(d.Text, " ")
+	cmds := CommandFlags("registry")
+	if len(CMDargs) == 2 {
+		for i := 0; i < len(cmds); i++ {
+			for j := 0; j < len(*sug); j++ {
+
+				if !libs.SuggestInList((*sug)[j], cmds) {
+					*sug = libs.Remove(*sug, j)
+
+				}
+			}
+		}
+	} else if len(CMDargs) >= 3 {
+		for i := 0; i < len(cmds); i++ {
+			for j := 0; j < len(*sug); j++ {
+
+				if cmds[i].Text == (*sug)[j].Text {
+					*sug = libs.Remove(*sug, j)
+
+				}
+			}
+		}
+	}
+}
+
+func image(d prompt.Document, sug *[]prompt.Suggest) {
+	CMDargs := strings.Split(d.Text, " ")
+	cmds := CommandFlags("image")
+	if len(CMDargs) == 2 {
+		for j := 0; j < len(*sug); j++ {
+			if (*sug)[j].Text[0] == '-' {
+				*sug = libs.Remove(*sug, j)
+			}
+		}
+		// fmt.Println(*sug)
+	} else if len(CMDargs) >= 3 {
+		for i := 0; i < len(cmds); i++ {
+			for j := 0; j < len(*sug); j++ {
+
+				if cmds[i].Text == (*sug)[j].Text {
+					*sug = libs.Remove(*sug, j)
 				}
 			}
 		}

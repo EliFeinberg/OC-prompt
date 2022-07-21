@@ -9,11 +9,8 @@ Interactive CLI tool for OpenShift. Includes autocomplete for valid functions an
             git clone https://github.com/Eli-IBM/OC-prompt.git
 3. Run the following command
    
-            go build -o oc-prompt main.go
-4. Copy file into local executables
-   
-            cp oc-prompt /usr/local/bin/
-5. To execute run
+            make build_prod
+4. Now you can execute oc-prompt using the following command
 
             oc-prompt
 ----------------
@@ -28,6 +25,7 @@ Interactive CLI tool for OpenShift. Includes autocomplete for valid functions an
 - [ ] Implement Usage instruction for each Openshift Command
 - [x] Pull Recommended local files Into AutoComplete
 - [ ] Pull Recommended Ports Into Autocomplete
+- [x] Create Makefile to more easily compile
 
 ## Phase 3
 - [ ] Create Tool to speed up adding new commands/flag
@@ -36,7 +34,7 @@ Interactive CLI tool for OpenShift. Includes autocomplete for valid functions an
 - [x] Implement History
 
 ## Optional Features
-- [ ] login with ENV Vars
+- [x] login with ENV Vars
 
 # Testing
 Built on: <br />

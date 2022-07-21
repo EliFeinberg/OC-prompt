@@ -46,13 +46,13 @@ func completer(d prompt.Document) []prompt.Suggest {
 		} else {
 			// Suggestions for valid commands
 			s = resources.CommandFlags(CMDargs[0])
-			if CMDargs[0] == "set" {
-				resources.Usage()["set"](d, &s)
-			}
 		}
 		// Extra Settings for Customization
 		if GlobalFlags {
 			s = append(s, GLOBAL_OP...)
+		}
+		if libs.StringInList(CMDargs[0], resources.Implemented) {
+			resources.Usage()[CMDargs[0]](d, &s)
 		}
 		if prune {
 			pruneUsedArgs(CMDargs, &s)
@@ -74,7 +74,6 @@ func completer(d prompt.Document) []prompt.Suggest {
 func pruneUsedArgs(CMDargs []string, s *[]prompt.Suggest) {
 	for i := 1; i < len(CMDargs); i++ {
 		for j := 0; j < len(*s); j++ {
-
 			if CMDargs[i] == (*s)[j].Text {
 				*s = libs.Remove(*s, j)
 				break
@@ -125,6 +124,20 @@ func main() {
 			ps = exec.Command("clear")
 		} else {
 			// Actual Execution of Command
+			if CMDargs[0] == "login" {
+				log_us := os.Getenv("OC_USR")
+				log_pass := os.Getenv("OC_PASS")
+				log_port := os.Getenv("OC_PORT")
+				if len(CMDargs) < 2 && log_port != "" {
+					CMDargs = append(CMDargs, log_port)
+					if log_us != "" {
+						CMDargs = append(CMDargs, "-u", log_us)
+						if log_pass != "" {
+							CMDargs = append(CMDargs, "-p", log_pass)
+						}
+					}
+				}
+			}
 			ps = exec.Command("oc", CMDargs...)
 		}
 
