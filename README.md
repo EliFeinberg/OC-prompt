@@ -6,7 +6,7 @@ Interactive CLI tool for OpenShift. Includes autocomplete for valid functions an
 1. Install [Golang](https://go.dev/doc/install) and [Openshift-CLI](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html)
 2. Clone this repository 
 
-            git clone https://github.com/Eli-IBM/OC-prompt.git
+            git clone https://github.com/EliFeinberg/OC-prompt.git
 3. Run the following command
    
             make build_prod
